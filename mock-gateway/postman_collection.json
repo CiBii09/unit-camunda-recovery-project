@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "onboarding-abandonment-recovery-mock",
+    "name": "Onboarding Abandonment Recovery Mock Server",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Add Item to Cart",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Iphone 18\",\n  \"price\": 999,\n  \"qty\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4500/cart/items",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["cart", "items"]
+            }
+          }
+        },
+        {
+          "name": "Get Cart",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4500/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["cart"]
+            }
+          }
+        },
+        {
+          "name": "Checkout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4500/checkout",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["checkout"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SMS Sub-tasks",
+      "item": [
+        {
+          "name": "Sub-task 5.1: Send SMS Gateway",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"REQ-SMS-001\",\n  \"messageContent\": \"Khao sat API SMS Gateway\",\n  \"isUnicode\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4500/api/v1/sms/send",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["api", "v1", "sms", "send"]
+            }
+          }
+        },
+        {
+          "name": "Sub-task 5.2: DLR & Opt-out Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"messageId\": \"SMS-123456789\",\n  \"phoneNumber\": \"0901234567\",\n  \"status\": \"OPT_OUT\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4500/api/v1/sms/webhook/dlr",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["api", "v1", "sms", "webhook", "dlr"]
+            }
+          }
+        },
+        {
+          "name": "Sub-task 5.3: Adapter Send (No Blind Retry)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"REQ_ADAPTER_001\",\n  \"retryCount\": 0\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["api", "v1", "sms", "adapter", "send"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

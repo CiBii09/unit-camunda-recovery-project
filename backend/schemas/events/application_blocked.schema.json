@@ -1,0 +1,18 @@
+{
+  "title": "Application Blocked Event",
+  "allOf": [
+    {
+      "$ref": "../common_event.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "const": "APPLICATION_BLOCKED"
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unit-camunda-recovery.local/schemas/events/application_blocked.schema.json"
+}

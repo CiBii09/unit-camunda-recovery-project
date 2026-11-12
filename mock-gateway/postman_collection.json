@@ -122,7 +122,76 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"requestId\": \"REQ_ADAPTER_001\",\n  \"retryCount\": 0\n}"
+              "raw": "{\n  \"requestId\": \"REQ_ADAPTER_001_TEST\",\n  \"retryCount\": 0\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["api", "v1", "sms", "adapter", "send"]
+            }
+          }
+        },
+        {
+          "name": "Trùng lặp",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"REQ_ADAPTER_001_TEST\",\n  \"retryCount\": 0\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["api", "v1", "sms", "adapter", "send"]
+            }
+          }
+        },
+        {
+          "name": "Timeout & đối soát",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"REQ_NEW_TIMEOUT_01\",\n  \"retryCount\": 1,\n  \"simulateTimeout\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4500",
+              "path": ["api", "v1", "sms", "adapter", "send"]
+            }
+          }
+        },
+        {
+          "name": "Chống \"retry mù\" (REC 08)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"REQ_NEW_REC08_01\",\n  \"retryCount\": 4\n}"
             },
             "url": {
               "raw": "http://localhost:4500/api/v1/sms/adapter/send",

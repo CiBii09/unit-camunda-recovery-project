@@ -1,0 +1,18 @@
+{
+  "title": "Contact Preference Updated Event",
+  "allOf": [
+    {
+      "$ref": "../common_event.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "const": "CONTACT_PREFERENCE_UPDATED"
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unit-camunda-recovery.local/schemas/events/contact_preference_updated.schema.json"
+}

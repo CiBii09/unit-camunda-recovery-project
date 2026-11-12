@@ -1,0 +1,62 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unit-camunda-recovery.local/schemas/common_event.schema.json",
+  "title": "Common Bank Event",
+  "type": "object",
+  "required": [
+    "bank",
+    "applicant_key",
+    "application_id",
+    "event_id",
+    "event_type",
+    "source",
+    "schema_version",
+    "event_time",
+    "ingestion_time",
+    "sequence"
+  ],
+  "properties": {
+    "bank": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicant_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "application_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ingestion_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": true
+}

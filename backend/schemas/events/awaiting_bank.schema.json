@@ -1,0 +1,18 @@
+{
+  "title": "Awaiting Bank Event",
+  "allOf": [
+    {
+      "$ref": "../common_event.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "const": "AWAITING_BANK"
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unit-camunda-recovery.local/schemas/events/awaiting_bank.schema.json"
+}

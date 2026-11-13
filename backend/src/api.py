@@ -1,7 +1,7 @@
-
-from fastapi import FastAPI
+﻿from fastapi import FastAPI
 
 from src.event_processor import EventProcessor
+from src.application_status import ApplicationStatusProvider
 
 
 app = FastAPI(
@@ -10,8 +10,13 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Create one processor instance for this API process.
-event_processor = EventProcessor()
+# Mock provider for local development and testing.
+# This is NOT a real bank integration.
+application_status_provider = ApplicationStatusProvider()
+
+event_processor = EventProcessor(
+    status_provider=application_status_provider
+)
 
 
 @app.get("/health")
@@ -28,13 +33,7 @@ def receive_event(event: dict):
     """
     Receive and process an application event.
 
-    No authoritative status service is connected yet.
-    Therefore, valid events are placed in SAFE_HOLD.
+    Current application status must be available and fresh.
+    Missing or unavailable status results in SAFE_HOLD.
     """
-    result = event_processor.process_event(
-        event=event,
-        status_time=None
-    )
-
-    return result
-
+    return event_processor.process_event(event=event)

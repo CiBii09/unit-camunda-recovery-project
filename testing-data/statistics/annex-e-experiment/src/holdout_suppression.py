@@ -145,7 +145,7 @@ def add_suppression(conn, applicant_key, reason, source, effective_at=None, now=
 
 
 def active_suppressions(conn, applicant_key, at=None):
-    """Danh sach ly do chan dang co hieu luc tai thoi diem `at`.=="""
+    """Danh sach ly do chan dang co hieu luc tai thoi diem `at`."""
     at = at or datetime.now()
     rows = conn.execute(
         "SELECT reason FROM suppression_list WHERE applicant_key=? AND effective_at<=?",

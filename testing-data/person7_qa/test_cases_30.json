@@ -1,0 +1,274 @@
+[
+  {
+    "id": "P7-AUTO-01",
+    "group": "Chặn tự duyệt",
+    "name": "Chưa có phê duyệt maker-checker",
+    "overrides": {
+      "approved": false
+    },
+    "expected": "BLOCK_APPROVAL"
+  },
+  {
+    "id": "P7-AUTO-02",
+    "group": "Chặn tự duyệt",
+    "name": "Sai phiên bản mẫu SMS",
+    "overrides": {
+      "template_valid": false
+    },
+    "expected": "BLOCK_TEMPLATE"
+  },
+  {
+    "id": "P7-AUTO-03",
+    "group": "Chặn tự duyệt",
+    "name": "Consent chưa xác nhận",
+    "overrides": {
+      "consent": false
+    },
+    "expected": "BLOCK_CONSENT"
+  },
+  {
+    "id": "P7-AUTO-04",
+    "group": "Chặn tự duyệt",
+    "name": "Không xác minh được số liên hệ",
+    "overrides": {
+      "verified": false
+    },
+    "expected": "BLOCK_CONTACT"
+  },
+  {
+    "id": "P7-AUTO-05",
+    "group": "Chặn tự duyệt",
+    "name": "Hồ sơ chưa ở trạng thái chờ khách hàng",
+    "overrides": {
+      "status": "COMPLETED"
+    },
+    "expected": "BLOCK_STATUS"
+  },
+  {
+    "id": "P7-AUTO-06",
+    "group": "Chặn tự duyệt",
+    "name": "Đủ phê duyệt và điều kiện",
+    "overrides": {},
+    "expected": "ALLOW"
+  },
+  {
+    "id": "P7-DUP-01",
+    "group": "Trùng lặp",
+    "name": "Event ID đã xử lý",
+    "overrides": {
+      "duplicate_event": true
+    },
+    "expected": "BLOCK_DUP_EVENT"
+  },
+  {
+    "id": "P7-DUP-02",
+    "group": "Trùng lặp",
+    "name": "Episode ID đang tồn tại",
+    "overrides": {
+      "duplicate_episode": true
+    },
+    "expected": "BLOCK_DUP_EPISODE"
+  },
+  {
+    "id": "P7-DUP-03",
+    "group": "Trùng lặp",
+    "name": "Attempt key đã được provider chấp nhận",
+    "overrides": {
+      "accepted_attempt": true
+    },
+    "expected": "BLOCK_DUP_ATTEMPT"
+  },
+  {
+    "id": "P7-DUP-04",
+    "group": "Trùng lặp",
+    "name": "Provider acceptance không rõ, giữ reconciliation",
+    "overrides": {
+      "unknown_acceptance": true
+    },
+    "expected": "HOLD_RECONCILIATION"
+  },
+  {
+    "id": "P7-DUP-05",
+    "group": "Trùng lặp",
+    "name": "Event mới với khóa duy nhất",
+    "overrides": {},
+    "expected": "ALLOW"
+  },
+  {
+    "id": "P7-DUP-06",
+    "group": "Trùng lặp",
+    "name": "Trùng requestId qua worker thứ hai",
+    "overrides": {
+      "duplicate_request": true
+    },
+    "expected": "BLOCK_DUP_REQUEST"
+  },
+  {
+    "id": "P7-FREQ-01",
+    "group": "Giới hạn tần suất",
+    "name": "Đã gửi 2 SMS trong 7 ngày",
+    "overrides": {
+      "reminders_7d": 2
+    },
+    "expected": "BLOCK_CAP"
+  },
+  {
+    "id": "P7-FREQ-02",
+    "group": "Giới hạn tần suất",
+    "name": "Đã gửi 3 SMS trong 7 ngày",
+    "overrides": {
+      "reminders_7d": 3
+    },
+    "expected": "BLOCK_CAP"
+  },
+  {
+    "id": "P7-FREQ-03",
+    "group": "Giới hạn tần suất",
+    "name": "Mới gửi 47 giờ trước",
+    "overrides": {
+      "reminders_7d": 1,
+      "hours_since_last": 47
+    },
+    "expected": "BLOCK_SPACING"
+  },
+  {
+    "id": "P7-FREQ-04",
+    "group": "Giới hạn tần suất",
+    "name": "Đủ 48 giờ từ SMS trước",
+    "overrides": {
+      "reminders_7d": 1,
+      "hours_since_last": 48
+    },
+    "expected": "ALLOW"
+  },
+  {
+    "id": "P7-FREQ-05",
+    "group": "Giới hạn tần suất",
+    "name": "Ngoài khung giờ: 08:59",
+    "overrides": {
+      "hour": 8
+    },
+    "expected": "BLOCK_WINDOW"
+  },
+  {
+    "id": "P7-FREQ-06",
+    "group": "Giới hạn tần suất",
+    "name": "Trong khung giờ: 10:00",
+    "overrides": {
+      "hour": 10
+    },
+    "expected": "ALLOW"
+  },
+  {
+    "id": "P7-LATE-01",
+    "group": "Sự kiện đến muộn",
+    "name": "Event cũ hơn trạng thái đã hoàn tất",
+    "overrides": {
+      "event_age_seconds": 120,
+      "status": "COMPLETED"
+    },
+    "expected": "BLOCK_STATUS"
+  },
+  {
+    "id": "P7-LATE-02",
+    "group": "Sự kiện đến muộn",
+    "name": "Event quá hạn đọc trạng thái 61 giây",
+    "overrides": {
+      "status_age_seconds": 61
+    },
+    "expected": "HOLD_STALE"
+  },
+  {
+    "id": "P7-LATE-03",
+    "group": "Sự kiện đến muộn",
+    "name": "Event đúng hạn 60 giây",
+    "overrides": {
+      "status_age_seconds": 60
+    },
+    "expected": "ALLOW"
+  },
+  {
+    "id": "P7-LATE-04",
+    "group": "Sự kiện đến muộn",
+    "name": "Event đến muộn sau suppression",
+    "overrides": {
+      "event_age_seconds": 500,
+      "suppressed": true
+    },
+    "expected": "BLOCK_SUPPRESSION"
+  },
+  {
+    "id": "P7-LATE-05",
+    "group": "Sự kiện đến muộn",
+    "name": "Event đến muộn với consent bị thu hồi",
+    "overrides": {
+      "event_age_seconds": 500,
+      "consent": false
+    },
+    "expected": "BLOCK_CONSENT"
+  },
+  {
+    "id": "P7-LATE-06",
+    "group": "Sự kiện đến muộn",
+    "name": "Không đọc được trạng thái nguồn",
+    "overrides": {
+      "source_ok": false
+    },
+    "expected": "HOLD_SOURCE"
+  },
+  {
+    "id": "P7-STOP-01",
+    "group": "Stop / Suppression",
+    "name": "Có suppression trước dispatch",
+    "overrides": {
+      "suppressed": true
+    },
+    "expected": "BLOCK_SUPPRESSION"
+  },
+  {
+    "id": "P7-STOP-02",
+    "group": "Stop / Suppression",
+    "name": "Nhận STOP trước dispatch",
+    "overrides": {
+      "stop": true
+    },
+    "expected": "BLOCK_STOP"
+  },
+  {
+    "id": "P7-STOP-03",
+    "group": "Stop / Suppression",
+    "name": "STOP đồng thời với gửi: ưu tiên STOP",
+    "overrides": {
+      "stop": true,
+      "approved": true
+    },
+    "expected": "BLOCK_STOP"
+  },
+  {
+    "id": "P7-STOP-04",
+    "group": "Stop / Suppression",
+    "name": "Khách hàng hoàn tất trước dispatch",
+    "overrides": {
+      "status": "COMPLETED"
+    },
+    "expected": "BLOCK_STATUS"
+  },
+  {
+    "id": "P7-STOP-05",
+    "group": "Stop / Suppression",
+    "name": "Ủy quyền gửi hết hạn >5 giây",
+    "overrides": {
+      "authorization_age_seconds": 6
+    },
+    "expected": "BLOCK_AUTH_EXPIRED"
+  },
+  {
+    "id": "P7-STOP-06",
+    "group": "Stop / Suppression",
+    "name": "Không STOP, không suppression, ủy quyền hợp lệ",
+    "overrides": {
+      "authorization_age_seconds": 4
+    },
+    "expected": "ALLOW"
+  }
+]

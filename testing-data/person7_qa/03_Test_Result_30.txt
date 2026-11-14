@@ -1,0 +1,51 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.13.5, pytest-9.0.2, pluggy-1.6.0 -- /opt/pyvenv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.5', 'Platform': 'Linux-6.18.57-x86_64-with-glibc2.41', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.13.0', 'ddtrace': '4.4.0', 'Faker': '40.1.2', 'asyncio': '1.3.0', 'cov': '7.0.0', 'json-report': '1.5.0', 'metadata': '3.1.1'}, 'PLATFORM': 'linux/amd64', 'CI': 'true'}
+rootdir: /mnt/data/Person7_30_Test_Suite
+plugins: anyio-4.13.0, ddtrace-4.4.0, Faker-40.1.2, asyncio-1.3.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+[1mcollecting ... [0mcollected 30 items
+
+test_30_scenarios.py::test_synthetic_policy[P7-AUTO-01] [32mPASSED[0m[32m           [  3%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-AUTO-02] [32mPASSED[0m[32m           [  6%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-AUTO-03] [32mPASSED[0m[32m           [ 10%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-AUTO-04] [32mPASSED[0m[32m           [ 13%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-AUTO-05] [32mPASSED[0m[32m           [ 16%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-AUTO-06] [32mPASSED[0m[32m           [ 20%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-DUP-01] [32mPASSED[0m[32m            [ 23%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-DUP-02] [32mPASSED[0m[32m            [ 26%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-DUP-03] [32mPASSED[0m[32m            [ 30%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-DUP-04] [32mPASSED[0m[32m            [ 33%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-DUP-05] [32mPASSED[0m[32m            [ 36%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-DUP-06] [32mPASSED[0m[32m            [ 40%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-FREQ-01] [32mPASSED[0m[32m           [ 43%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-FREQ-02] [32mPASSED[0m[32m           [ 46%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-FREQ-03] [32mPASSED[0m[32m           [ 50%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-FREQ-04] [32mPASSED[0m[32m           [ 53%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-FREQ-05] [32mPASSED[0m[32m           [ 56%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-FREQ-06] [32mPASSED[0m[32m           [ 60%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-LATE-01] [32mPASSED[0m[32m           [ 63%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-LATE-02] [32mPASSED[0m[32m           [ 66%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-LATE-03] [32mPASSED[0m[32m           [ 70%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-LATE-04] [32mPASSED[0m[32m           [ 73%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-LATE-05] [32mPASSED[0m[32m           [ 76%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-LATE-06] [32mPASSED[0m[32m           [ 80%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-STOP-01] [32mPASSED[0m[32m           [ 83%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-STOP-02] [32mPASSED[0m[32m           [ 86%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-STOP-03] [32mPASSED[0m[32m           [ 90%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-STOP-04] [32mPASSED[0m[32m           [ 93%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-STOP-05] [32mPASSED[0m[32m           [ 96%][0m
+test_30_scenarios.py::test_synthetic_policy[P7-STOP-06] [32mPASSED[0m[32m           [100%][0m
+
+[32m============================== [32m[1m30 passed[0m[32m in 0.06s[0m[32m ==============================[0m
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.

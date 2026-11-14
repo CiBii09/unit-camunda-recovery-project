@@ -87,7 +87,7 @@ def arm_from_bucket(bucket: int, treatment_bp: int = DEFAULT_TREATMENT_BP) -> st
     return "TREATMENT" if bucket < treatment_bp else "CONTROL"
 
 
-def assign(conn, applicant_key, application_id, eligible, now=None, treatment_bp=DEFAULT_TREATMENT_BP):
+def assign(conn, applicant_key, application_id, eligible, now=None, treatment_bp=DEFAULT_TREATMENT_BP, secret=SECRET):
     """
     Chia nhom mot lan duy nhat cho moi nguoi.
     Tra ve dict hoac None (khong du dieu kien / dang bi chan truoc khi chia).
@@ -101,7 +101,7 @@ def assign(conn, applicant_key, application_id, eligible, now=None, treatment_bp
     existing = _get_assignment(conn, applicant_key)
     if existing is None and active_suppressions(conn, applicant_key, now):
         return None
-    b = hash_bucket(applicant_key)
+    b = hash_bucket(applicant_key, secret=secret)
     conn.execute(
         """INSERT OR IGNORE INTO experiment_assignment
            (experiment_id, applicant_key, arm, index_application_id, hash_bucket,

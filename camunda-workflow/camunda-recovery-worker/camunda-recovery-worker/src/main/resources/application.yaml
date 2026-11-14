@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: camunda-recovery-worker
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: "${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/camunda_recovery?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}"
+    username: "${SPRING_DATASOURCE_USERNAME:${MYSQL_USER:camunda}}"
+    password: "${SPRING_DATASOURCE_PASSWORD:${MYSQL_PASSWORD}}"
+worker:
+  http:
+    connect-timeout: 2s
+    read-timeout: 15s
+  suppression:
+    base-url: "${WORKER_SUPPRESSION_BASE_URL:http://localhost:8001}"
+  sms-gateway:
+    base-url: "${WORKER_SMS_GATEWAY_BASE_URL:http://localhost:4500}"
+  retry:
+    max-retries: 3
+    initial-backoff: 2s
+    max-backoff: 30s
+camunda:
+  client:
+    mode: simple
+    zeebe:
+      broker:
+        gateway-address: localhost:26500
+      security:
+        plaintext: true

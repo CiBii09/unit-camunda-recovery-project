@@ -1,0 +1,91 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: camunda-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: camunda_recovery
+      MYSQL_USER: ${MYSQL_USER:-camunda}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD in your environment}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in your environment}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+    networks:
+      - camunda-net
+
+  zeebe:
+    image: camunda/zeebe:8.5.0
+    container_name: camunda-zeebe
+    ports:
+      - "26500:26500"
+      - "9600:9600"
+    environment:
+      - ZEEBE_BROKER_GATEWAY_NETWORK_HOST=0.0.0.0
+      - SPRING_PROFILES_ACTIVE=broker
+      - ZEEBE_BROKER_DATA_DISK_USAGE_WARNING_THRESHOLD=0.9
+      - ZEEBE_BROKER_DATA_DISK_USAGE_REGS_THRESHOLD=0.95
+    restart: always
+    networks:
+      - camunda-net
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+    container_name: camunda-elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    restart: always
+    networks:
+      - camunda-net
+
+  operate:
+    image: camunda/operate:8.5.0
+    container_name: camunda-operate
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=auth,operate
+      - CAMUNDA_OPERATE_ELASTICSEARCH_URL=http://elasticsearch:9200
+      - ZEEBE_BROKER_CONTACTPOINT=zeebe:26500
+      - CAMUNDA_OPERATE_SECURITY_AUTHENTICATION_MODE=none
+    restart: always
+    depends_on:
+      - zeebe
+      - elasticsearch
+    networks:
+      - camunda-net
+
+  tasklist:
+    image: camunda/tasklist:8.5.0
+    container_name: camunda-tasklist
+    ports:
+      - "8082:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=auth,tasklist
+      - CAMUNDA_TASKLIST_ELASTICSEARCH_URL=http://elasticsearch:9200
+      - ZEEBE_BROKER_CONTACTPOINT=zeebe:26500
+      - CAMUNDA_TASKLIST_SECURITY_AUTHENTICATION_MODE=none
+    restart: always
+    depends_on:
+      - zeebe
+      - elasticsearch
+    networks:
+      - camunda-net
+
+networks:
+  camunda-net:
+    driver: bridge
+
+volumes:
+  mysql_data:

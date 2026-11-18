@@ -1,17 +1,40 @@
-import os
+﻿import os
 from pathlib import Path
+from typing import Literal
 
 from fastapi import Depends, FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field
+
 from src.application_status import ApplicationStatusProvider
+from src.dashboard_metrics_service import DashboardMetricsService
 from src.event_processor import EventProcessor
 from src.experiment_service import ExperimentService
+from src.help_queue_service import HelpQueueService
 
 
 app = FastAPI(
     title="UNIT Camunda Recovery - Event Intake API",
     description="API for receiving events and checking experiment eligibility.",
-    version="1.1.0",
+    version="1.2.0",
+)
+
+# CORS: allow the React frontend to call this backend.
+frontend_origins = [
+    origin.strip()
+    for origin in os.getenv(
+        "FRONTEND_ORIGINS",
+        "http://localhost:5173",
+    ).split(",")
+    if origin.strip()
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=frontend_origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization"],
 )
 
 # Mock provider for local development and testing.
@@ -21,6 +44,10 @@ application_status_provider = ApplicationStatusProvider()
 event_processor = EventProcessor(
     status_provider=application_status_provider
 )
+
+# Persistent Sprint 3 services.
+help_queue_service = HelpQueueService()
+dashboard_metrics_service = DashboardMetricsService()
 
 
 class StrictRequest(BaseModel):
@@ -37,6 +64,11 @@ class ExperimentDispatchCheckRequest(StrictRequest):
     assignment_ref: str = Field(min_length=1)
     bank: str = Field(min_length=1)
     application_id: str = Field(min_length=1)
+
+
+class ResolveTaskRequest(StrictRequest):
+    action: Literal["RETRY", "CANCEL"]
+    note: str = Field(default="", max_length=1000)
 
 
 def get_experiment_service():
@@ -94,7 +126,85 @@ def receive_event(event: dict):
     Current application status must be available and fresh.
     Missing or unavailable status results in SAFE_HOLD.
     """
-    return event_processor.process_event(event=event)
+    result = event_processor.process_event(event=event)
+
+    # Record event processing metrics.
+    dashboard_metrics_service.record_event_result(result)
+
+    # SAFE_HOLD events are added to the staff intervention queue.
+    if result.get("status") == "SAFE_HOLD":
+        help_queue_service.create_task(event, result)
+
+    return result
+
+
+@app.get("/api/metrics")
+def get_dashboard_metrics():
+    """Return aggregated metrics for the frontend Dashboard."""
+    return dashboard_metrics_service.get_metrics()
+
+
+@app.get("/api/help-queue")
+def get_help_queue(
+    status: Literal["OPEN", "RESOLVED", "CANCELLED", "ALL"] = "OPEN",
+):
+    """Return staff intervention tasks without exposing applicant identity."""
+    selected_status = None if status == "ALL" else status
+    tasks = help_queue_service.list_tasks(status=selected_status)
+
+    return {
+        "count": len(tasks),
+        "tasks": tasks,
+    }
+
+
+@app.post("/api/tasks/{task_id}/resolve")
+def resolve_help_queue_task(
+    task_id: str,
+    request: ResolveTaskRequest,
+):
+    """
+    Resolve a staff task.
+
+    RETRY reprocesses the original event.
+    CANCEL marks the task as cancelled.
+    """
+
+    def retry_handler(original_event):
+        retry_result = event_processor.process_event(
+            event=original_event
+        )
+
+        dashboard_metrics_service.record_event_result(
+            retry_result
+        )
+
+        return retry_result
+
+    try:
+        result = help_queue_service.resolve_task(
+            task_id=task_id,
+            action=request.action,
+            note=request.note,
+            retry_handler=(
+                retry_handler
+                if request.action == "RETRY"
+                else None
+            ),
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=422,
+            detail=str(exc),
+        ) from exc
+
+    if result is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Help queue task not found",
+        )
+
+    return result
 
 
 @app.post("/experiments/assign")

@@ -30,10 +30,14 @@ class CamundaRecoveryWorkerApplicationTests {
 		Assertions.assertEquals(IdempotencyStore.ClaimResult.IN_PROGRESS,
 				idempotencyStore.claim(key, UUID.randomUUID().toString()));
 
-		idempotencyStore.markCompleted(key, claimToken);
+		idempotencyStore.markCompleted(
+				key, claimToken, java.util.Map.of("dispatchDecision", "SENT"));
 
 		Assertions.assertEquals(IdempotencyStore.ClaimResult.COMPLETED,
 				idempotencyStore.claim(key, UUID.randomUUID().toString()));
+		Assertions.assertEquals(
+				java.util.Map.of("dispatchDecision", "SENT"),
+				idempotencyStore.getCompletionVariables(key));
 	}
 
 }

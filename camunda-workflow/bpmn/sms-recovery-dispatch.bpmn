@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:zeebe="http://camunda.org/schema/zeebe/1.0"
+                  id="Definitions_SmsRecovery"
+                  targetNamespace="https://unit.example/camunda/sms-recovery">
+  <bpmn:process id="sms-recovery-dispatch" name="SMS recovery dispatch" isExecutable="true">
+    <bpmn:startEvent id="start" name="Recovery requested">
+      <bpmn:outgoing>flow_start_dispatch</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="dispatch_sms" name="Check controls and dispatch SMS">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="dispatch-sms-task" retries="3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>flow_start_dispatch</bpmn:incoming>
+      <bpmn:incoming>flow_resume_dispatch</bpmn:incoming>
+      <bpmn:outgoing>flow_dispatch_outcome</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="dispatch_outcome" name="Dispatch outcome" default="flow_dispatch_done">
+      <bpmn:incoming>flow_dispatch_outcome</bpmn:incoming>
+      <bpmn:outgoing>flow_to_safe_hold</bpmn:outgoing>
+      <bpmn:outgoing>flow_dispatch_done</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="safety_hold_review" name="Review safety hold before resuming">
+      <bpmn:incoming>flow_to_safe_hold</bpmn:incoming>
+      <bpmn:outgoing>flow_resume_dispatch</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="dispatch_complete" name="Dispatch complete">
+      <bpmn:incoming>flow_dispatch_done</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="flow_start_dispatch" sourceRef="start" targetRef="dispatch_sms" />
+    <bpmn:sequenceFlow id="flow_dispatch_outcome" sourceRef="dispatch_sms" targetRef="dispatch_outcome" />
+    <bpmn:sequenceFlow id="flow_to_safe_hold" sourceRef="dispatch_outcome" targetRef="safety_hold_review">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">= dispatchDecision = "SAFE_HOLD"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="flow_dispatch_done" sourceRef="dispatch_outcome" targetRef="dispatch_complete" />
+    <bpmn:sequenceFlow id="flow_resume_dispatch" sourceRef="safety_hold_review" targetRef="dispatch_sms" />
+  </bpmn:process>
+</bpmn:definitions>

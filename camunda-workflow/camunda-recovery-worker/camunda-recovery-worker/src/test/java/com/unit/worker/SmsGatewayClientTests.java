@@ -25,7 +25,9 @@ class SmsGatewayClientTests {
                 .andExpect(content().json(
                         "{\"requestId\":\"req-1\",\"retryCount\":2,\"messageContent\":\"Reminder\"}"))
                 .andRespond(withSuccess(
-                        "{\"status\":\"DUPLICATE_REQUEST_IGNORED\",\"requestId\":\"req-1\"}",
+                        "{\"status\":\"DUPLICATE_REQUEST_IGNORED\",\"requestId\":\"req-1\","
+                                + "\"gatewayMessageId\":\"GW-1\",\"deliveryStatus\":\"SENT\","
+                                + "\"sentAt\":\"2026-11-21T00:00:00Z\"}",
                         APPLICATION_JSON));
 
         assertDoesNotThrow(() -> client.send("req-1", 2, "Reminder"));

@@ -9,13 +9,20 @@ import {
   RefreshCw,
   ChevronDown,
 } from 'lucide-react';
-import { MOCK_DASHBOARD_METRICS } from '../mockData';
 import { DashboardMetrics } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+const DEFAULT_DASHBOARD_METRICS: DashboardMetrics = {
+  activeEpisodes: '0',
+  dataFreshnessRate: '--',
+  suppressionRate: '--',
+  uiLatency: '--',
+  eventIntakeRate: 0,
+  smsDelivered24h: 0,
+};
 
 export const DashboardPage: React.FC = () => {
-  const [metrics, setMetrics] = useState<DashboardMetrics>(MOCK_DASHBOARD_METRICS);
+  const [metrics, setMetrics] = useState<DashboardMetrics>(DEFAULT_DASHBOARD_METRICS);
   const [isKillSwitchActive, setIsKillSwitchActive] = useState<boolean>(false);
   const [activeSubTab, setActiveSubTab] = useState<string>('Monitoring');
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);

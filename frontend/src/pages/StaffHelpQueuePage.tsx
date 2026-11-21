@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { HelpQueueTask } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
 
 export const StaffHelpQueuePage: React.FC = () => {
   const [tasks, setTasks] = useState<HelpQueueTask[]>([]);

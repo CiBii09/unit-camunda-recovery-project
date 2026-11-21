@@ -11,6 +11,7 @@ from src.dashboard_metrics_service import DashboardMetricsService
 from src.event_processor import EventProcessor
 from src.experiment_service import ExperimentService
 from src.help_queue_service import HelpQueueService
+from src.safety_control_service import SafetyControlService
 
 
 app = FastAPI(
@@ -48,10 +49,13 @@ event_processor = EventProcessor(
 # Persistent Sprint 3 services.
 help_queue_service = HelpQueueService()
 dashboard_metrics_service = DashboardMetricsService()
+safety_control_service = SafetyControlService(
+    os.getenv("SAFETY_CONTROLS_DB_PATH")
+)
 
 
 class StrictRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
 
 
 class ExperimentAssignRequest(StrictRequest):
@@ -69,6 +73,46 @@ class ExperimentDispatchCheckRequest(StrictRequest):
 class ResolveTaskRequest(StrictRequest):
     action: Literal["RETRY", "CANCEL"]
     note: str = Field(default="", max_length=1000)
+
+
+class KillSwitchRequest(StrictRequest):
+    enabled: bool
+    reason: str = Field(min_length=1, max_length=1000)
+    operator_id: str = Field(alias="operatorId", min_length=1, max_length=128)
+
+
+class QueuePauseRequest(StrictRequest):
+    paused: bool
+    reason: str = Field(min_length=1, max_length=1000)
+    operator_id: str = Field(alias="operatorId", min_length=1, max_length=128)
+
+
+@app.get("/api/v1/safety/status")
+def get_safety_status():
+    return safety_control_service.get_status()
+
+
+@app.post("/api/v1/safety/kill-switch")
+def set_kill_switch(request: KillSwitchRequest):
+    return safety_control_service.set_kill_switch(
+        enabled=request.enabled,
+        reason=request.reason,
+        operator_id=request.operator_id,
+    )
+
+
+@app.post("/api/v1/safety/queue-pause")
+def set_queue_pause(request: QueuePauseRequest):
+    return safety_control_service.set_queue_paused(
+        paused=request.paused,
+        reason=request.reason,
+        operator_id=request.operator_id,
+    )
+
+
+@app.get("/api/v1/safety/audit-logs")
+def get_safety_audit_logs():
+    return safety_control_service.get_audit_logs()
 
 
 def get_experiment_service():

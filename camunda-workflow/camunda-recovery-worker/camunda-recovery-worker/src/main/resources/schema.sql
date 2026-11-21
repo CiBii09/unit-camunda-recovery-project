@@ -5,3 +5,8 @@ CREATE TABLE IF NOT EXISTS worker_idempotency (
     lease_until TIMESTAMP NULL,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS worker_idempotency_results (
+    idempotency_key VARCHAR(255) PRIMARY KEY,
+    variables_json TEXT NOT NULL
+);

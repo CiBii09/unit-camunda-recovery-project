@@ -42,6 +42,8 @@ class BaseIdempotentWorkerTests {
 
         assertEquals(1, worker.executionCount());
         verify(client, times(2)).newCompleteCommand(jobKey);
+        verify(client.newCompleteCommand(jobKey), times(2))
+                .variables(java.util.Map.of("dispatchDecision", "TEST_COMPLETED"));
     }
 
     @Test
@@ -75,6 +77,22 @@ class BaseIdempotentWorkerTests {
         verify(client, times(1)).newCompleteCommand(jobKey);
     }
 
+    @Test
+    void safeHoldReleasesClaimSoOperatorResumeCanRunBusinessLogicAgain() {
+        long jobKey = 404L;
+        JobClient client = mock(JobClient.class, RETURNS_DEEP_STUBS);
+        ActivatedJob job = activatedJob(jobKey);
+        SafeHoldThenSendWorker worker = new SafeHoldThenSendWorker(
+                idempotencyStore, retryPolicy, "test:" + UUID.randomUUID());
+
+        worker.handleJob(client, job);
+        worker.handleJob(client, job);
+
+        assertEquals(2, worker.executionCount());
+        verify(client, times(2)).newCompleteCommand(jobKey);
+        verify(client, org.mockito.Mockito.never()).newFailCommand(jobKey);
+    }
+
     private ActivatedJob activatedJob(long jobKey) {
         ActivatedJob job = mock(ActivatedJob.class);
         when(job.getKey()).thenReturn(jobKey);
@@ -105,12 +123,14 @@ class BaseIdempotentWorkerTests {
         }
 
         @Override
-        protected void executeBusinessLogic(
+        protected WorkerResult executeBusinessLogic(
                 JobClient client, ActivatedJob job, String idempotencyKey) throws Exception {
             executionCount.incrementAndGet();
             if (failAfterSideEffect) {
                 throw new Exception("Simulated timeout after side effect");
             }
+            return WorkerResult.completed(java.util.Map.of(
+                    "dispatchDecision", "TEST_COMPLETED"));
         }
 
         private int executionCount() {
@@ -137,11 +157,46 @@ class BaseIdempotentWorkerTests {
         }
 
         @Override
-        protected void executeBusinessLogic(
+        protected WorkerResult executeBusinessLogic(
                 JobClient client, ActivatedJob job, String idempotencyKey) throws Exception {
             if (executionCount.incrementAndGet() == 1) {
                 throw new SafeToRetryException("Failure before side effect", null);
             }
+            return WorkerResult.completed();
+        }
+
+        private int executionCount() {
+            return executionCount.get();
+        }
+    }
+
+    private static class SafeHoldThenSendWorker extends BaseIdempotentWorker {
+
+        private final String idempotencyKey;
+        private final AtomicInteger executionCount = new AtomicInteger();
+
+        private SafeHoldThenSendWorker(
+                IdempotencyStore idempotencyStore,
+                WorkerRetryPolicy retryPolicy,
+                String idempotencyKey) {
+            super(idempotencyStore, retryPolicy);
+            this.idempotencyKey = idempotencyKey;
+        }
+
+        @Override
+        protected String getIdempotencyKey(ActivatedJob job) {
+            return idempotencyKey;
+        }
+
+        @Override
+        protected WorkerResult executeBusinessLogic(
+                JobClient client, ActivatedJob job, String idempotencyKey) {
+            if (executionCount.incrementAndGet() == 1) {
+                return WorkerResult.safeHold(java.util.Map.of(
+                        "dispatchDecision", "SAFE_HOLD",
+                        "blockReason", "KILL_SWITCH_ACTIVE"));
+            }
+            return WorkerResult.completed(java.util.Map.of("dispatchDecision", "SENT"));
         }
 
         private int executionCount() {

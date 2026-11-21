@@ -1,0 +1,6 @@
+SafetyControlsE2ETests > oneThousandMockJobsPauseAndResumeWithoutLosingSafeHeldWork()
+SAFETY_CONTROL event=KILL_SWITCH_ON held=200 sends_while_active=0
+SAFETY_CONTROL event=QUEUE_PAUSE_ON held=200 sends_while_paused=0
+SAFETY_CONTROL event=CONTROLS_RESET resumed_held_jobs=400
+E2E_SAFETY_RESULT total=1000 sent_before_pause=400 kill_switch_held=200 queue_pause_held=200 sent_after_resume=400 total_sent=1000 gateway_calls_while_blocked=0
+BUILD SUCCESSFUL in 6s

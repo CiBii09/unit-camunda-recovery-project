@@ -2,14 +2,38 @@
   "info": {
     "_postman_id": "onboarding-abandonment-recovery-mock",
     "name": "Onboarding Abandonment Recovery Mock Server",
+    "description": "Bộ kiểm thử E2E luồng Camunda -> Mock Gateway -> SMS Adapter -> Database & Safety Controls khớp API_CONTRACT.md v1.0.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:4500", "type": "string" },
+    { "key": "adapterRequestId", "value": "", "type": "string" },
+    { "key": "adapterGatewayMsgId", "value": "", "type": "string" }
+  ],
   "item": [
     {
       "name": "Cart",
       "item": [
         {
           "name": "Add Item to Cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201 Created', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "pm.test('Cart contains added item', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.items).to.be.an('array').that.is.not.empty;",
+                  "    pm.expect(json.items[json.items.length - 1].name).to.eql('Iphone 18');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -23,38 +47,67 @@
               "raw": "{\n  \"name\": \"Iphone 18\",\n  \"price\": 999,\n  \"qty\": 1\n}"
             },
             "url": {
-              "raw": "http://localhost:4500/cart/items",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/cart/items",
+              "host": ["{{baseUrl}}"],
               "path": ["cart", "items"]
             }
           }
         },
         {
           "name": "Get Cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Cart response is array', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.items).to.be.an('array');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:4500/cart",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/cart",
+              "host": ["{{baseUrl}}"],
               "path": ["cart"]
             }
           }
         },
         {
           "name": "Checkout",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201 Created', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "pm.test('Checkout returns confirmed orderId', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.status).to.eql('confirmed');",
+                  "    pm.expect(json.orderId).to.be.a('string').and.not.empty;",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "http://localhost:4500/checkout",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/checkout",
+              "host": ["{{baseUrl}}"],
               "path": ["checkout"]
             }
           }
@@ -66,6 +119,27 @@
       "item": [
         {
           "name": "Sub-task 5.1: Send SMS Gateway",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('SMS Gateway response matches contract schema', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.status).to.eql('SUCCESS');",
+                  "    pm.expect(json.errorCode).to.eql('00');",
+                  "    pm.expect(json.deliveryStatus).to.eql('SENT');",
+                  "    pm.expect(json).to.have.property('gatewayMessageId');",
+                  "    pm.expect(json).to.have.property('sentAt');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -76,19 +150,38 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"requestId\": \"REQ-SMS-001\",\n  \"messageContent\": \"Khao sat API SMS Gateway\",\n  \"isUnicode\": true\n}"
+              "raw": "{\n  \"requestId\": \"REQ-SMS-{{$timestamp}}-{{$randomInt}}\",\n  \"phoneNumber\": \"0901234567\",\n  \"templateCode\": \"TPL_PAYMENT_RETRY_01\",\n  \"content\": \"[HKDN] Khao sat API SMS Gateway\",\n  \"messageContent\": \"Khao sat API SMS Gateway\",\n  \"isUnicode\": true\n}"
             },
             "url": {
-              "raw": "http://localhost:4500/api/v1/sms/send",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/api/v1/sms/send",
+              "host": ["{{baseUrl}}"],
               "path": ["api", "v1", "sms", "send"]
             }
           }
         },
         {
           "name": "Sub-task 5.2: DLR & Opt-out Webhook",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('DLR webhook acknowledged with deliveredAt & errorDetail', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.code).to.eql('00');",
+                  "    pm.expect(json.success).to.eql(true);",
+                  "    pm.expect(json.status).to.eql('DELIVERED');",
+                  "    pm.expect(json).to.have.property('deliveredAt');",
+                  "    pm.expect(json).to.have.property('errorDetail');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -99,19 +192,50 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"messageId\": \"SMS-123456789\",\n  \"phoneNumber\": \"0901234567\",\n  \"status\": \"OPT_OUT\"\n}"
+              "raw": "{\n  \"gatewayMessageId\": \"{{adapterGatewayMsgId}}\",\n  \"requestId\": \"{{adapterRequestId}}\",\n  \"phoneNumber\": \"0901234567\",\n  \"status\": \"DELIVERED\",\n  \"deliveredAt\": \"2026-11-21T10:45:00Z\",\n  \"errorDetail\": null\n}"
             },
             "url": {
-              "raw": "http://localhost:4500/api/v1/sms/webhook/dlr",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/api/v1/sms/webhook/dlr",
+              "host": ["{{baseUrl}}"],
               "path": ["api", "v1", "sms", "webhook", "dlr"]
             }
           }
         },
         {
           "name": "Sub-task 5.3: Adapter Send (No Blind Retry)",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "var reqId = 'REQ-ADAPTER-' + Date.now() + '-' + Math.floor(Math.random() * 10000);",
+                  "pm.collectionVariables.set('adapterRequestId', reqId);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Adapter persisted record & returned gatewayMessageId + sentAt', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.status).to.eql('ADAPTER_SUCCESS');",
+                  "    pm.expect(json.idempotencyKeyVerified).to.eql(true);",
+                  "    pm.expect(json.deliveryStatus).to.eql('SENT');",
+                  "    pm.expect(json).to.have.property('attemptKey');",
+                  "    pm.expect(json).to.have.property('gatewayMessageId');",
+                  "    pm.expect(json).to.have.property('sentAt');",
+                  "    pm.collectionVariables.set('adapterGatewayMsgId', json.gatewayMessageId);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -122,19 +246,36 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"requestId\": \"REQ_ADAPTER_001_TEST\",\n  \"retryCount\": 0\n}"
+              "raw": "{\n  \"requestId\": \"{{adapterRequestId}}\",\n  \"processInstanceId\": \"camunda-proc-99102\",\n  \"phoneNumber\": \"0901234567\",\n  \"templateCode\": \"TPL_PAYMENT_RETRY_01\",\n  \"content\": \"[HKDN] Giao dich chua hoan tat, vui long thu lai.\",\n  \"retryCount\": 0\n}"
             },
             "url": {
-              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/api/v1/sms/adapter/send",
+              "host": ["{{baseUrl}}"],
               "path": ["api", "v1", "sms", "adapter", "send"]
             }
           }
         },
         {
           "name": "Trùng lặp",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK (Idempotent)', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Duplicate request suppressed with DUPLICATE_REQUEST_ID', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.status).to.eql('DUPLICATE_REQUEST_IGNORED');",
+                  "    pm.expect(json.decision).to.eql('SUPPRESSED');",
+                  "    pm.expect(json.blockReason).to.eql('DUPLICATE_REQUEST_ID');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -145,19 +286,35 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"requestId\": \"REQ_ADAPTER_001_TEST\",\n  \"retryCount\": 0\n}"
+              "raw": "{\n  \"requestId\": \"{{adapterRequestId}}\",\n  \"processInstanceId\": \"camunda-proc-99102\",\n  \"phoneNumber\": \"0901234567\",\n  \"templateCode\": \"TPL_PAYMENT_RETRY_01\",\n  \"content\": \"[HKDN] Giao dich chua hoan tat, vui long thu lai.\",\n  \"retryCount\": 0\n}"
             },
             "url": {
-              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/api/v1/sms/adapter/send",
+              "host": ["{{baseUrl}}"],
               "path": ["api", "v1", "sms", "adapter", "send"]
             }
           }
         },
         {
           "name": "Timeout & đối soát",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 504 Gateway Timeout', function () {",
+                  "    pm.response.to.have.status(504);",
+                  "});",
+                  "pm.test('Triggers reconciliation job without blind retry', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.status).to.eql('GATEWAY_TIMEOUT');",
+                  "    pm.expect(json.action).to.eql('TRIGGER_RECONCILIATION_JOB');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -168,19 +325,36 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"requestId\": \"REQ_NEW_TIMEOUT_01\",\n  \"retryCount\": 1,\n  \"simulateTimeout\": true\n}"
+              "raw": "{\n  \"requestId\": \"REQ-TIMEOUT-{{$timestamp}}-{{$randomInt}}\",\n  \"retryCount\": 1,\n  \"simulateTimeout\": true\n}"
             },
             "url": {
-              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/api/v1/sms/adapter/send",
+              "host": ["{{baseUrl}}"],
               "path": ["api", "v1", "sms", "adapter", "send"]
             }
           }
         },
         {
           "name": "Chống \"retry mù\" (REC 08)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 422 Unprocessable Entity', function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});",
+                  "pm.test('REC 08 violation prevented when retryCount > 3', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.errorCode).to.eql('REC08_VIOLATION_PREVENTED');",
+                  "    pm.expect(json.exceptionReason).to.eql('SMS_GATEWAY_MAX_RETRY_EXCEEDED');",
+                  "    pm.expect(json.action).to.eql('MOVE_TO_DEAD_LETTER_QUEUE_AND_RECONCILE');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -191,14 +365,165 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"requestId\": \"REQ_NEW_REC08_01\",\n  \"retryCount\": 4\n}"
+              "raw": "{\n  \"requestId\": \"REQ-REC08-{{$timestamp}}-{{$randomInt}}\",\n  \"retryCount\": 4\n}"
             },
             "url": {
-              "raw": "http://localhost:4500/api/v1/sms/adapter/send",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "4500",
+              "raw": "{{baseUrl}}/api/v1/sms/adapter/send",
+              "host": ["{{baseUrl}}"],
               "path": ["api", "v1", "sms", "adapter", "send"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Safety & Emergency Controls",
+      "item": [
+        {
+          "name": "Get Safety Status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Safety status schema valid', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json).to.have.property('killSwitchActive');",
+                  "    pm.expect(json).to.have.property('queuePaused');",
+                  "    pm.expect(json).to.have.property('dataFreshnessSeconds');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/safety/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "safety", "status"]
+            }
+          }
+        },
+        {
+          "name": "Activate Kill-Switch & Verify 503 Block",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Kill-Switch enabled & queuePaused synced true', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.status).to.eql('SUCCESS');",
+                  "    pm.expect(json.killSwitchActive).to.eql(true);",
+                  "    pm.expect(json.queuePaused).to.eql(true);",
+                  "    pm.expect(json).to.have.property('auditLogId');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"enabled\": true,\n  \"reason\": \"Kiem tra Global Kill-Switch truoc E2E\",\n  \"operatorId\": \"CB\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/safety/kill-switch",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "safety", "kill-switch"]
+            }
+          }
+        },
+        {
+          "name": "Adapter Blocked (503) When Kill-Switch Active",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 503 Service Unavailable', function () {",
+                  "    pm.response.to.have.status(503);",
+                  "});",
+                  "pm.test('Returns KILL_SWITCH_ACTIVE errorCode', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.errorCode).to.eql('KILL_SWITCH_ACTIVE');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"REQ-BLOCKED-{{$timestamp}}-{{$randomInt}}\",\n  \"phoneNumber\": \"0901234567\",\n  \"templateCode\": \"TPL_PAYMENT_RETRY_01\",\n  \"content\": \"[HKDN] Tin nhan bi chan boi Kill-Switch\",\n  \"retryCount\": 0\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sms/adapter/send",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sms", "adapter", "send"]
+            }
+          }
+        },
+        {
+          "name": "Reset Safety State Back to Normal",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200 OK', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Kill-Switch disabled cleanly', function () {",
+                  "    var json = pm.response.json();",
+                  "    pm.expect(json.killSwitchActive).to.eql(false);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"enabled\": false,\n  \"reason\": \"Hoan tat test Kill-Switch\",\n  \"operatorId\": \"CB\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/safety/kill-switch",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "safety", "kill-switch"]
             }
           }
         }

@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
+import java.time.Instant;
+
 @Component
 public class SmsGatewayClient {
 
@@ -16,7 +18,7 @@ public class SmsGatewayClient {
         this.restClient = restClientBuilder.baseUrl(baseUrl).build();
     }
 
-    public void send(String requestId, int retriesRemaining, String messageContent) {
+    public GatewayReceipt send(String requestId, int retriesRemaining, String messageContent) {
         GatewayResponse response = restClient.post()
                 .uri("/api/v1/sms/adapter/send")
                 .body(new GatewayRequest(requestId, retriesRemaining, messageContent))
@@ -27,6 +29,11 @@ public class SmsGatewayClient {
                 || "DUPLICATE_REQUEST_IGNORED".equals(response.status()))) {
             throw new IllegalStateException("SMS gateway returned an unsuccessful response");
         }
+        return new GatewayReceipt(
+                response.status(),
+                response.gatewayMessageId(),
+                response.deliveryStatus(),
+                response.sentAt() == null ? Instant.now().toString() : response.sentAt());
     }
 
     private record GatewayRequest(
@@ -35,6 +42,17 @@ public class SmsGatewayClient {
             String messageContent) {
     }
 
-    private record GatewayResponse(String status) {
+    private record GatewayResponse(
+            String status,
+            String gatewayMessageId,
+            String deliveryStatus,
+            String sentAt) {
+    }
+
+    public record GatewayReceipt(
+            String status,
+            String gatewayMessageId,
+            String deliveryStatus,
+            String sentAt) {
     }
 }

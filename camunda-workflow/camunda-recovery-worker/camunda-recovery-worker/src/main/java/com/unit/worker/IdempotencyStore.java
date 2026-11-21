@@ -1,23 +1,38 @@
 package com.unit.worker;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Map;
 import java.util.List;
 
 @Repository
 public class IdempotencyStore {
 
     private static final Duration CLAIM_LEASE = Duration.ofMinutes(15);
+    private static final TypeReference<Map<String, Object>> VARIABLES_TYPE =
+            new TypeReference<>() {
+            };
 
     private final JdbcTemplate jdbcTemplate;
+    private final ObjectMapper objectMapper;
+    private final TransactionTemplate transactionTemplate;
 
-    public IdempotencyStore(JdbcTemplate jdbcTemplate) {
+    public IdempotencyStore(
+            JdbcTemplate jdbcTemplate,
+            ObjectMapper objectMapper,
+            PlatformTransactionManager transactionManager) {
         this.jdbcTemplate = jdbcTemplate;
+        this.objectMapper = objectMapper;
+        this.transactionTemplate = new TransactionTemplate(transactionManager);
     }
 
     public ClaimResult claim(String idempotencyKey, String claimToken) {
@@ -70,25 +85,63 @@ public class IdempotencyStore {
         return ClaimResult.IN_PROGRESS;
     }
 
-    public void markCompleted(String idempotencyKey, String claimToken) {
-        int updated = jdbcTemplate.update(
-                "UPDATE worker_idempotency "
-                        + "SET status = 'COMPLETED', claim_token = NULL, lease_until = NULL, "
-                        + "updated_at = CURRENT_TIMESTAMP "
-                        + "WHERE idempotency_key = ? AND status = 'PROCESSING' AND claim_token = ?",
-                idempotencyKey,
-                claimToken);
-        if (updated != 1) {
-            throw new IllegalStateException("Idempotency claim was lost before completion");
+    public void markCompleted(
+            String idempotencyKey, String claimToken, Map<String, Object> completionVariables) {
+        String variablesJson;
+        try {
+            variablesJson = objectMapper.writeValueAsString(completionVariables);
+        } catch (Exception e) {
+            throw new IllegalStateException("Could not serialize completion variables", e);
+        }
+
+        transactionTemplate.executeWithoutResult(transaction -> {
+            jdbcTemplate.update(
+                    "DELETE FROM worker_idempotency_results WHERE idempotency_key = ?",
+                    idempotencyKey);
+            jdbcTemplate.update(
+                    "INSERT INTO worker_idempotency_results (idempotency_key, variables_json) "
+                            + "VALUES (?, ?)",
+                    idempotencyKey,
+                    variablesJson);
+            int updated = jdbcTemplate.update(
+                    "UPDATE worker_idempotency "
+                            + "SET status = 'COMPLETED', claim_token = NULL, lease_until = NULL, "
+                            + "updated_at = CURRENT_TIMESTAMP "
+                            + "WHERE idempotency_key = ? AND status = 'PROCESSING' AND claim_token = ?",
+                    idempotencyKey,
+                    claimToken);
+            if (updated != 1) {
+                throw new IllegalStateException("Idempotency claim was lost before completion");
+            }
+        });
+    }
+
+    public Map<String, Object> getCompletionVariables(String idempotencyKey) {
+        List<String> rows = jdbcTemplate.query(
+                "SELECT variables_json FROM worker_idempotency_results WHERE idempotency_key = ?",
+                (resultSet, rowNumber) -> resultSet.getString("variables_json"),
+                idempotencyKey);
+        if (rows.isEmpty()) {
+            return Map.of();
+        }
+        try {
+            return objectMapper.readValue(rows.get(0), VARIABLES_TYPE);
+        } catch (Exception e) {
+            throw new IllegalStateException("Could not read persisted completion variables", e);
         }
     }
 
     public void release(String idempotencyKey, String claimToken) {
-        jdbcTemplate.update(
-                "DELETE FROM worker_idempotency "
-                        + "WHERE idempotency_key = ? AND status = 'PROCESSING' AND claim_token = ?",
-                idempotencyKey,
-                claimToken);
+        transactionTemplate.executeWithoutResult(transaction -> {
+            jdbcTemplate.update(
+                    "DELETE FROM worker_idempotency_results WHERE idempotency_key = ?",
+                    idempotencyKey);
+            jdbcTemplate.update(
+                    "DELETE FROM worker_idempotency "
+                            + "WHERE idempotency_key = ? AND status = 'PROCESSING' AND claim_token = ?",
+                    idempotencyKey,
+                    claimToken);
+        });
     }
 
     public enum ClaimResult {

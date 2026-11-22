@@ -1,0 +1,4002 @@
+[
+  {
+    "application_id": "S3-0001",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0002",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0003",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0004",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0005",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0006",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0007",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0008",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0009",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0010",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0011",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0012",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0013",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0014",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0015",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0016",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0017",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0018",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0019",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0020",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0021",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0022",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0023",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0024",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0025",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0026",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0027",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0028",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0029",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0030",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0031",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0032",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0033",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0034",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0035",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0036",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0037",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0038",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0039",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0040",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0041",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0042",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0043",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0044",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0045",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0046",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0047",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0048",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0049",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0050",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0051",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0052",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0053",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0054",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0055",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0056",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0057",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0058",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0059",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0060",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0061",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0062",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0063",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0064",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0065",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0066",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0067",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0068",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0069",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0070",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0071",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0072",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0073",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0074",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0075",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0076",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0077",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0078",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0079",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0080",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0081",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0082",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0083",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0084",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0085",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0086",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0087",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0088",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0089",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0090",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0091",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0092",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0093",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0094",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0095",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0096",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0097",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0098",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0099",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0100",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0101",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0102",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0103",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0104",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0105",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0106",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0107",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0108",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0109",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0110",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0111",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0112",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0113",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0114",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0115",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0116",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0117",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0118",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0119",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0120",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0121",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0122",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0123",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0124",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0125",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0126",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0127",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0128",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0129",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0130",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0131",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0132",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0133",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0134",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0135",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0136",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0137",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0138",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0139",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0140",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0141",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0142",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0143",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0144",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0145",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0146",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0147",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0148",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0149",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0150",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0151",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0152",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0153",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0154",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0155",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0156",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0157",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0158",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0159",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0160",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0161",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0162",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0163",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0164",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0165",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0166",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0167",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0168",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0169",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0170",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0171",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0172",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0173",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0174",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0175",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0176",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0177",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0178",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0179",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0180",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0181",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0182",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0183",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0184",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0185",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0186",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0187",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0188",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0189",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0190",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0191",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0192",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0193",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0194",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0195",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0196",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0197",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0198",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0199",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0200",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0201",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0202",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0203",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0204",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0205",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0206",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0207",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0208",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0209",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0210",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0211",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0212",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0213",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0214",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0215",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0216",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0217",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0218",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0219",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0220",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0221",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0222",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0223",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0224",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0225",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0226",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0227",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0228",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0229",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0230",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0231",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0232",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0233",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0234",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0235",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0236",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0237",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0238",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0239",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0240",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0241",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0242",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0243",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0244",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0245",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0246",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0247",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0248",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0249",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0250",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0251",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0252",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0253",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0254",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0255",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0256",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0257",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0258",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0259",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0260",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0261",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0262",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0263",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0264",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0265",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0266",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0267",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0268",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0269",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0270",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0271",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0272",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0273",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0274",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0275",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0276",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0277",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0278",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0279",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0280",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0281",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0282",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0283",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0284",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0285",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0286",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0287",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0288",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0289",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0290",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0291",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0292",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0293",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0294",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0295",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0296",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0297",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0298",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0299",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0300",
+    "truth": "eligible"
+  },
+  {
+    "application_id": "S3-0301",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0302",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0303",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0304",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0305",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0306",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0307",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0308",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0309",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0310",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0311",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0312",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0313",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0314",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0315",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0316",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0317",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0318",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0319",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0320",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0321",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0322",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0323",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0324",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0325",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0326",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0327",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0328",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0329",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0330",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0331",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0332",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0333",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0334",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0335",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0336",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0337",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0338",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0339",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0340",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0341",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0342",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0343",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0344",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0345",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0346",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0347",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0348",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0349",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0350",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0351",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0352",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0353",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0354",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0355",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0356",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0357",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0358",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0359",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0360",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0361",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0362",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0363",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0364",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0365",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0366",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0367",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0368",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0369",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0370",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0371",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0372",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0373",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0374",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0375",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0376",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0377",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0378",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0379",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0380",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0381",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0382",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0383",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0384",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0385",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0386",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0387",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0388",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0389",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0390",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0391",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0392",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0393",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0394",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0395",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0396",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0397",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0398",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0399",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0400",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0401",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0402",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0403",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0404",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0405",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0406",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0407",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0408",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0409",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0410",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0411",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0412",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0413",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0414",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0415",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0416",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0417",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0418",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0419",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0420",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0421",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0422",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0423",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0424",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0425",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0426",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0427",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0428",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0429",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0430",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0431",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0432",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0433",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0434",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0435",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0436",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0437",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0438",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0439",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0440",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0441",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0442",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0443",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0444",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0445",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0446",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0447",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0448",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0449",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0450",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0451",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0452",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0453",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0454",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0455",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0456",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0457",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0458",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0459",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0460",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0461",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0462",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0463",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0464",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0465",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0466",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0467",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0468",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0469",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0470",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0471",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0472",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0473",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0474",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0475",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0476",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0477",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0478",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0479",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0480",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0481",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0482",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0483",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0484",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0485",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0486",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0487",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0488",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0489",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0490",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0491",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0492",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0493",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0494",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0495",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0496",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0497",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0498",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0499",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0500",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0501",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0502",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0503",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0504",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0505",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0506",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0507",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0508",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0509",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0510",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0511",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0512",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0513",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0514",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0515",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0516",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0517",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0518",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0519",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0520",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0521",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0522",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0523",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0524",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0525",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0526",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0527",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0528",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0529",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0530",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0531",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0532",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0533",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0534",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0535",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0536",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0537",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0538",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0539",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0540",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0541",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0542",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0543",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0544",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0545",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0546",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0547",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0548",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0549",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0550",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0551",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0552",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0553",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0554",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0555",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0556",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0557",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0558",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0559",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0560",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0561",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0562",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0563",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0564",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0565",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0566",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0567",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0568",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0569",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0570",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0571",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0572",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0573",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0574",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0575",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0576",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0577",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0578",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0579",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0580",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0581",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0582",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0583",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0584",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0585",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0586",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0587",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0588",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0589",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0590",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0591",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0592",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0593",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0594",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0595",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0596",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0597",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0598",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0599",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0600",
+    "truth": "excluded"
+  },
+  {
+    "application_id": "S3-0601",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0602",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0603",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0604",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0605",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0606",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0607",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0608",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0609",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0610",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0611",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0612",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0613",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0614",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0615",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0616",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0617",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0618",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0619",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0620",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0621",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0622",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0623",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0624",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0625",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0626",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0627",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0628",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0629",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0630",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0631",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0632",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0633",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0634",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0635",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0636",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0637",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0638",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0639",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0640",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0641",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0642",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0643",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0644",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0645",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0646",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0647",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0648",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0649",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0650",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0651",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0652",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0653",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0654",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0655",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0656",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0657",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0658",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0659",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0660",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0661",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0662",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0663",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0664",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0665",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0666",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0667",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0668",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0669",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0670",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0671",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0672",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0673",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0674",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0675",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0676",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0677",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0678",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0679",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0680",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0681",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0682",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0683",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0684",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0685",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0686",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0687",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0688",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0689",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0690",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0691",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0692",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0693",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0694",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0695",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0696",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0697",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0698",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0699",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0700",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0701",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0702",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0703",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0704",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0705",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0706",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0707",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0708",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0709",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0710",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0711",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0712",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0713",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0714",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0715",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0716",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0717",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0718",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0719",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0720",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0721",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0722",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0723",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0724",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0725",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0726",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0727",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0728",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0729",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0730",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0731",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0732",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0733",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0734",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0735",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0736",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0737",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0738",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0739",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0740",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0741",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0742",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0743",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0744",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0745",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0746",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0747",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0748",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0749",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0750",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0751",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0752",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0753",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0754",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0755",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0756",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0757",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0758",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0759",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0760",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0761",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0762",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0763",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0764",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0765",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0766",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0767",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0768",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0769",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0770",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0771",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0772",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0773",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0774",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0775",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0776",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0777",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0778",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0779",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0780",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0781",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0782",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0783",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0784",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0785",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0786",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0787",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0788",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0789",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0790",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0791",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0792",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0793",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0794",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0795",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0796",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0797",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0798",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0799",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0800",
+    "truth": "ineligible"
+  },
+  {
+    "application_id": "S3-0801",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0802",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0803",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0804",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0805",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0806",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0807",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0808",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0809",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0810",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0811",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0812",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0813",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0814",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0815",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0816",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0817",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0818",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0819",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0820",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0821",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0822",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0823",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0824",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0825",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0826",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0827",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0828",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0829",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0830",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0831",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0832",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0833",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0834",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0835",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0836",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0837",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0838",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0839",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0840",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0841",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0842",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0843",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0844",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0845",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0846",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0847",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0848",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0849",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0850",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0851",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0852",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0853",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0854",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0855",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0856",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0857",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0858",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0859",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0860",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0861",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0862",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0863",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0864",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0865",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0866",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0867",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0868",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0869",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0870",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0871",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0872",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0873",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0874",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0875",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0876",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0877",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0878",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0879",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0880",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0881",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0882",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0883",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0884",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0885",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0886",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0887",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0888",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0889",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0890",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0891",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0892",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0893",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0894",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0895",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0896",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0897",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0898",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0899",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0900",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0901",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0902",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0903",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0904",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0905",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0906",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0907",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0908",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0909",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0910",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0911",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0912",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0913",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0914",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0915",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0916",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0917",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0918",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0919",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0920",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0921",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0922",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0923",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0924",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0925",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0926",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0927",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0928",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0929",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0930",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0931",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0932",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0933",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0934",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0935",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0936",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0937",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0938",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0939",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0940",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0941",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0942",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0943",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0944",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0945",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0946",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0947",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0948",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0949",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0950",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0951",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0952",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0953",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0954",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0955",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0956",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0957",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0958",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0959",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0960",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0961",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0962",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0963",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0964",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0965",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0966",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0967",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0968",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0969",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0970",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0971",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0972",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0973",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0974",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0975",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0976",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0977",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0978",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0979",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0980",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0981",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0982",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0983",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0984",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0985",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0986",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0987",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0988",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0989",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0990",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0991",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0992",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0993",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0994",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0995",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0996",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0997",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0998",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-0999",
+    "truth": "unknown"
+  },
+  {
+    "application_id": "S3-1000",
+    "truth": "unknown"
+  }
+]

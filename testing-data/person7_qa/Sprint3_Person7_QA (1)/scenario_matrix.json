@@ -1,0 +1,3741 @@
+[
+  {
+    "id": "AT01-001",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 0
+    }
+  },
+  {
+    "id": "AT01-002",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 1
+    }
+  },
+  {
+    "id": "AT01-003",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 2
+    }
+  },
+  {
+    "id": "AT01-004",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 3
+    }
+  },
+  {
+    "id": "AT01-005",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 4
+    }
+  },
+  {
+    "id": "AT01-006",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 5
+    }
+  },
+  {
+    "id": "AT01-007",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 6
+    }
+  },
+  {
+    "id": "AT01-008",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 7
+    }
+  },
+  {
+    "id": "AT01-009",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 8
+    }
+  },
+  {
+    "id": "AT01-010",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 9
+    }
+  },
+  {
+    "id": "AT01-011",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 10
+    }
+  },
+  {
+    "id": "AT01-012",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 11
+    }
+  },
+  {
+    "id": "AT01-013",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 12
+    }
+  },
+  {
+    "id": "AT01-014",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 13
+    }
+  },
+  {
+    "id": "AT01-015",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 14
+    }
+  },
+  {
+    "id": "AT01-016",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 15
+    }
+  },
+  {
+    "id": "AT01-017",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 16
+    }
+  },
+  {
+    "id": "AT01-018",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 17
+    }
+  },
+  {
+    "id": "AT01-019",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 18
+    }
+  },
+  {
+    "id": "AT01-020",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 19
+    }
+  },
+  {
+    "id": "AT01-021",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 20
+    }
+  },
+  {
+    "id": "AT01-022",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 21
+    }
+  },
+  {
+    "id": "AT01-023",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 22
+    }
+  },
+  {
+    "id": "AT01-024",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 23
+    }
+  },
+  {
+    "id": "AT01-025",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 24
+    }
+  },
+  {
+    "id": "AT01-026",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 25
+    }
+  },
+  {
+    "id": "AT01-027",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 26
+    }
+  },
+  {
+    "id": "AT01-028",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 27
+    }
+  },
+  {
+    "id": "AT01-029",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 28
+    }
+  },
+  {
+    "id": "AT01-030",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 29
+    }
+  },
+  {
+    "id": "AT01-031",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 30
+    }
+  },
+  {
+    "id": "AT01-032",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 31
+    }
+  },
+  {
+    "id": "AT01-033",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 32
+    }
+  },
+  {
+    "id": "AT01-034",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 33
+    }
+  },
+  {
+    "id": "AT01-035",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 34
+    }
+  },
+  {
+    "id": "AT01-036",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 35
+    }
+  },
+  {
+    "id": "AT01-037",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 36
+    }
+  },
+  {
+    "id": "AT01-038",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 37
+    }
+  },
+  {
+    "id": "AT01-039",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 38
+    }
+  },
+  {
+    "id": "AT01-040",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 39
+    }
+  },
+  {
+    "id": "AT01-041",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 40
+    }
+  },
+  {
+    "id": "AT01-042",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 41
+    }
+  },
+  {
+    "id": "AT01-043",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 42
+    }
+  },
+  {
+    "id": "AT01-044",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 43
+    }
+  },
+  {
+    "id": "AT01-045",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 44
+    }
+  },
+  {
+    "id": "AT01-046",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 45
+    }
+  },
+  {
+    "id": "AT01-047",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 46
+    }
+  },
+  {
+    "id": "AT01-048",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 47
+    }
+  },
+  {
+    "id": "AT01-049",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 48
+    }
+  },
+  {
+    "id": "AT01-050",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 49
+    }
+  },
+  {
+    "id": "AT01-051",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 50
+    }
+  },
+  {
+    "id": "AT01-052",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 51
+    }
+  },
+  {
+    "id": "AT01-053",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 52
+    }
+  },
+  {
+    "id": "AT01-054",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 53
+    }
+  },
+  {
+    "id": "AT01-055",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 54
+    }
+  },
+  {
+    "id": "AT01-056",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 55
+    }
+  },
+  {
+    "id": "AT01-057",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 56
+    }
+  },
+  {
+    "id": "AT01-058",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 57
+    }
+  },
+  {
+    "id": "AT01-059",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 58
+    }
+  },
+  {
+    "id": "AT01-060",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 59
+    }
+  },
+  {
+    "id": "AT01-061",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 60
+    }
+  },
+  {
+    "id": "AT01-062",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 61
+    }
+  },
+  {
+    "id": "AT01-063",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 62
+    }
+  },
+  {
+    "id": "AT01-064",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 63
+    }
+  },
+  {
+    "id": "AT01-065",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 64
+    }
+  },
+  {
+    "id": "AT01-066",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 65
+    }
+  },
+  {
+    "id": "AT01-067",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 66
+    }
+  },
+  {
+    "id": "AT01-068",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 67
+    }
+  },
+  {
+    "id": "AT01-069",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 68
+    }
+  },
+  {
+    "id": "AT01-070",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 69
+    }
+  },
+  {
+    "id": "AT01-071",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 70
+    }
+  },
+  {
+    "id": "AT01-072",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 71
+    }
+  },
+  {
+    "id": "AT01-073",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 72
+    }
+  },
+  {
+    "id": "AT01-074",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 73
+    }
+  },
+  {
+    "id": "AT01-075",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 74
+    }
+  },
+  {
+    "id": "AT01-076",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 75
+    }
+  },
+  {
+    "id": "AT01-077",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 76
+    }
+  },
+  {
+    "id": "AT01-078",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 77
+    }
+  },
+  {
+    "id": "AT01-079",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 78
+    }
+  },
+  {
+    "id": "AT01-080",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 79
+    }
+  },
+  {
+    "id": "AT01-081",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 80
+    }
+  },
+  {
+    "id": "AT01-082",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 81
+    }
+  },
+  {
+    "id": "AT01-083",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 82
+    }
+  },
+  {
+    "id": "AT01-084",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 83
+    }
+  },
+  {
+    "id": "AT01-085",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 84
+    }
+  },
+  {
+    "id": "AT01-086",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 85
+    }
+  },
+  {
+    "id": "AT01-087",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 86
+    }
+  },
+  {
+    "id": "AT01-088",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 87
+    }
+  },
+  {
+    "id": "AT01-089",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 88
+    }
+  },
+  {
+    "id": "AT01-090",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 89
+    }
+  },
+  {
+    "id": "AT01-091",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 90
+    }
+  },
+  {
+    "id": "AT01-092",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 91
+    }
+  },
+  {
+    "id": "AT01-093",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 92
+    }
+  },
+  {
+    "id": "AT01-094",
+    "at": "AT01",
+    "kind": "corrected_event",
+    "expected": "RECONCILE",
+    "inputs": {
+      "seed": 93
+    }
+  },
+  {
+    "id": "AT01-095",
+    "at": "AT01",
+    "kind": "missing_sequence",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 94
+    }
+  },
+  {
+    "id": "AT01-096",
+    "at": "AT01",
+    "kind": "cross_applicant",
+    "expected": "REJECT_LINK",
+    "inputs": {
+      "seed": 95
+    }
+  },
+  {
+    "id": "AT01-097",
+    "at": "AT01",
+    "kind": "clock_boundary",
+    "expected": "ALLOW_EVENT",
+    "inputs": {
+      "seed": 96
+    }
+  },
+  {
+    "id": "AT01-098",
+    "at": "AT01",
+    "kind": "multi_application",
+    "expected": "SEPARATE_EPISODE",
+    "inputs": {
+      "seed": 97
+    }
+  },
+  {
+    "id": "AT01-099",
+    "at": "AT01",
+    "kind": "duplicate_event",
+    "expected": "NO_NEW_EPISODE",
+    "inputs": {
+      "seed": 98
+    }
+  },
+  {
+    "id": "AT01-100",
+    "at": "AT01",
+    "kind": "late_event",
+    "expected": "HOLD_RECHECK",
+    "inputs": {
+      "seed": 99
+    }
+  },
+  {
+    "id": "AT03-001",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 0
+    }
+  },
+  {
+    "id": "AT03-002",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 1
+    }
+  },
+  {
+    "id": "AT03-003",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 2
+    }
+  },
+  {
+    "id": "AT03-004",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 3
+    }
+  },
+  {
+    "id": "AT03-005",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 4
+    }
+  },
+  {
+    "id": "AT03-006",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 5
+    }
+  },
+  {
+    "id": "AT03-007",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 6
+    }
+  },
+  {
+    "id": "AT03-008",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 7
+    }
+  },
+  {
+    "id": "AT03-009",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 8
+    }
+  },
+  {
+    "id": "AT03-010",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 9
+    }
+  },
+  {
+    "id": "AT03-011",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 10
+    }
+  },
+  {
+    "id": "AT03-012",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 11
+    }
+  },
+  {
+    "id": "AT03-013",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 12
+    }
+  },
+  {
+    "id": "AT03-014",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 13
+    }
+  },
+  {
+    "id": "AT03-015",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 14
+    }
+  },
+  {
+    "id": "AT03-016",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 15
+    }
+  },
+  {
+    "id": "AT03-017",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 16
+    }
+  },
+  {
+    "id": "AT03-018",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 17
+    }
+  },
+  {
+    "id": "AT03-019",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 18
+    }
+  },
+  {
+    "id": "AT03-020",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 19
+    }
+  },
+  {
+    "id": "AT03-021",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 20
+    }
+  },
+  {
+    "id": "AT03-022",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 21
+    }
+  },
+  {
+    "id": "AT03-023",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 22
+    }
+  },
+  {
+    "id": "AT03-024",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 23
+    }
+  },
+  {
+    "id": "AT03-025",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 24
+    }
+  },
+  {
+    "id": "AT03-026",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 25
+    }
+  },
+  {
+    "id": "AT03-027",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 26
+    }
+  },
+  {
+    "id": "AT03-028",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 27
+    }
+  },
+  {
+    "id": "AT03-029",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 28
+    }
+  },
+  {
+    "id": "AT03-030",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 29
+    }
+  },
+  {
+    "id": "AT03-031",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 30
+    }
+  },
+  {
+    "id": "AT03-032",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 31
+    }
+  },
+  {
+    "id": "AT03-033",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 32
+    }
+  },
+  {
+    "id": "AT03-034",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 33
+    }
+  },
+  {
+    "id": "AT03-035",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 34
+    }
+  },
+  {
+    "id": "AT03-036",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 35
+    }
+  },
+  {
+    "id": "AT03-037",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 36
+    }
+  },
+  {
+    "id": "AT03-038",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 37
+    }
+  },
+  {
+    "id": "AT03-039",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 38
+    }
+  },
+  {
+    "id": "AT03-040",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 39
+    }
+  },
+  {
+    "id": "AT03-041",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 40
+    }
+  },
+  {
+    "id": "AT03-042",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 41
+    }
+  },
+  {
+    "id": "AT03-043",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 42
+    }
+  },
+  {
+    "id": "AT03-044",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 43
+    }
+  },
+  {
+    "id": "AT03-045",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 44
+    }
+  },
+  {
+    "id": "AT03-046",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 45
+    }
+  },
+  {
+    "id": "AT03-047",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 46
+    }
+  },
+  {
+    "id": "AT03-048",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 47
+    }
+  },
+  {
+    "id": "AT03-049",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 48
+    }
+  },
+  {
+    "id": "AT03-050",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 49
+    }
+  },
+  {
+    "id": "AT03-051",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 50
+    }
+  },
+  {
+    "id": "AT03-052",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 51
+    }
+  },
+  {
+    "id": "AT03-053",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 52
+    }
+  },
+  {
+    "id": "AT03-054",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 53
+    }
+  },
+  {
+    "id": "AT03-055",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 54
+    }
+  },
+  {
+    "id": "AT03-056",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 55
+    }
+  },
+  {
+    "id": "AT03-057",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 56
+    }
+  },
+  {
+    "id": "AT03-058",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 57
+    }
+  },
+  {
+    "id": "AT03-059",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 58
+    }
+  },
+  {
+    "id": "AT03-060",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 59
+    }
+  },
+  {
+    "id": "AT03-061",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 60
+    }
+  },
+  {
+    "id": "AT03-062",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 61
+    }
+  },
+  {
+    "id": "AT03-063",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 62
+    }
+  },
+  {
+    "id": "AT03-064",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 63
+    }
+  },
+  {
+    "id": "AT03-065",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 64
+    }
+  },
+  {
+    "id": "AT03-066",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 65
+    }
+  },
+  {
+    "id": "AT03-067",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 66
+    }
+  },
+  {
+    "id": "AT03-068",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 67
+    }
+  },
+  {
+    "id": "AT03-069",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 68
+    }
+  },
+  {
+    "id": "AT03-070",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 69
+    }
+  },
+  {
+    "id": "AT03-071",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 70
+    }
+  },
+  {
+    "id": "AT03-072",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 71
+    }
+  },
+  {
+    "id": "AT03-073",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 72
+    }
+  },
+  {
+    "id": "AT03-074",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 73
+    }
+  },
+  {
+    "id": "AT03-075",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 74
+    }
+  },
+  {
+    "id": "AT03-076",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 75
+    }
+  },
+  {
+    "id": "AT03-077",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 76
+    }
+  },
+  {
+    "id": "AT03-078",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 77
+    }
+  },
+  {
+    "id": "AT03-079",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 78
+    }
+  },
+  {
+    "id": "AT03-080",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 79
+    }
+  },
+  {
+    "id": "AT03-081",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 80
+    }
+  },
+  {
+    "id": "AT03-082",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 81
+    }
+  },
+  {
+    "id": "AT03-083",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 82
+    }
+  },
+  {
+    "id": "AT03-084",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 83
+    }
+  },
+  {
+    "id": "AT03-085",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 84
+    }
+  },
+  {
+    "id": "AT03-086",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 85
+    }
+  },
+  {
+    "id": "AT03-087",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 86
+    }
+  },
+  {
+    "id": "AT03-088",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 87
+    }
+  },
+  {
+    "id": "AT03-089",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 88
+    }
+  },
+  {
+    "id": "AT03-090",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 89
+    }
+  },
+  {
+    "id": "AT03-091",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 90
+    }
+  },
+  {
+    "id": "AT03-092",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 91
+    }
+  },
+  {
+    "id": "AT03-093",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 92
+    }
+  },
+  {
+    "id": "AT03-094",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 93
+    }
+  },
+  {
+    "id": "AT03-095",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 94
+    }
+  },
+  {
+    "id": "AT03-096",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 95
+    }
+  },
+  {
+    "id": "AT03-097",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 96
+    }
+  },
+  {
+    "id": "AT03-098",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 97
+    }
+  },
+  {
+    "id": "AT03-099",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 98
+    }
+  },
+  {
+    "id": "AT03-100",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 99
+    }
+  },
+  {
+    "id": "AT03-101",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 100
+    }
+  },
+  {
+    "id": "AT03-102",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 101
+    }
+  },
+  {
+    "id": "AT03-103",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 102
+    }
+  },
+  {
+    "id": "AT03-104",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 103
+    }
+  },
+  {
+    "id": "AT03-105",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 104
+    }
+  },
+  {
+    "id": "AT03-106",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 105
+    }
+  },
+  {
+    "id": "AT03-107",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 106
+    }
+  },
+  {
+    "id": "AT03-108",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 107
+    }
+  },
+  {
+    "id": "AT03-109",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 108
+    }
+  },
+  {
+    "id": "AT03-110",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 109
+    }
+  },
+  {
+    "id": "AT03-111",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 110
+    }
+  },
+  {
+    "id": "AT03-112",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 111
+    }
+  },
+  {
+    "id": "AT03-113",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 112
+    }
+  },
+  {
+    "id": "AT03-114",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 113
+    }
+  },
+  {
+    "id": "AT03-115",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 114
+    }
+  },
+  {
+    "id": "AT03-116",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 115
+    }
+  },
+  {
+    "id": "AT03-117",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 116
+    }
+  },
+  {
+    "id": "AT03-118",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 117
+    }
+  },
+  {
+    "id": "AT03-119",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 118
+    }
+  },
+  {
+    "id": "AT03-120",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 119
+    }
+  },
+  {
+    "id": "AT03-121",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 120
+    }
+  },
+  {
+    "id": "AT03-122",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 121
+    }
+  },
+  {
+    "id": "AT03-123",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 122
+    }
+  },
+  {
+    "id": "AT03-124",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 123
+    }
+  },
+  {
+    "id": "AT03-125",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 124
+    }
+  },
+  {
+    "id": "AT03-126",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 125
+    }
+  },
+  {
+    "id": "AT03-127",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 126
+    }
+  },
+  {
+    "id": "AT03-128",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 127
+    }
+  },
+  {
+    "id": "AT03-129",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 128
+    }
+  },
+  {
+    "id": "AT03-130",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 129
+    }
+  },
+  {
+    "id": "AT03-131",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 130
+    }
+  },
+  {
+    "id": "AT03-132",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 131
+    }
+  },
+  {
+    "id": "AT03-133",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 132
+    }
+  },
+  {
+    "id": "AT03-134",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 133
+    }
+  },
+  {
+    "id": "AT03-135",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 134
+    }
+  },
+  {
+    "id": "AT03-136",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 135
+    }
+  },
+  {
+    "id": "AT03-137",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 136
+    }
+  },
+  {
+    "id": "AT03-138",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 137
+    }
+  },
+  {
+    "id": "AT03-139",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 138
+    }
+  },
+  {
+    "id": "AT03-140",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 139
+    }
+  },
+  {
+    "id": "AT03-141",
+    "at": "AT03",
+    "kind": "suppressed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 140
+    }
+  },
+  {
+    "id": "AT03-142",
+    "at": "AT03",
+    "kind": "stop",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 141
+    }
+  },
+  {
+    "id": "AT03-143",
+    "at": "AT03",
+    "kind": "completed",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 142
+    }
+  },
+  {
+    "id": "AT03-144",
+    "at": "AT03",
+    "kind": "quiet_hour",
+    "expected": "DEFER",
+    "inputs": {
+      "seed": 143
+    }
+  },
+  {
+    "id": "AT03-145",
+    "at": "AT03",
+    "kind": "cap",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 144
+    }
+  },
+  {
+    "id": "AT03-146",
+    "at": "AT03",
+    "kind": "stale",
+    "expected": "HOLD",
+    "inputs": {
+      "seed": 145
+    }
+  },
+  {
+    "id": "AT03-147",
+    "at": "AT03",
+    "kind": "pause",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 146
+    }
+  },
+  {
+    "id": "AT03-148",
+    "at": "AT03",
+    "kind": "ownership",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 147
+    }
+  },
+  {
+    "id": "AT03-149",
+    "at": "AT03",
+    "kind": "concurrent_update",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 148
+    }
+  },
+  {
+    "id": "AT03-150",
+    "at": "AT03",
+    "kind": "eligible",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 149
+    }
+  },
+  {
+    "id": "AT04-001",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 0
+    }
+  },
+  {
+    "id": "AT04-002",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 1
+    }
+  },
+  {
+    "id": "AT04-003",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 2
+    }
+  },
+  {
+    "id": "AT04-004",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 3
+    }
+  },
+  {
+    "id": "AT04-005",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 4
+    }
+  },
+  {
+    "id": "AT04-006",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 5
+    }
+  },
+  {
+    "id": "AT04-007",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 6
+    }
+  },
+  {
+    "id": "AT04-008",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 7
+    }
+  },
+  {
+    "id": "AT04-009",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 8
+    }
+  },
+  {
+    "id": "AT04-010",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 9
+    }
+  },
+  {
+    "id": "AT04-011",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 10
+    }
+  },
+  {
+    "id": "AT04-012",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 11
+    }
+  },
+  {
+    "id": "AT04-013",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 12
+    }
+  },
+  {
+    "id": "AT04-014",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 13
+    }
+  },
+  {
+    "id": "AT04-015",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 14
+    }
+  },
+  {
+    "id": "AT04-016",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 15
+    }
+  },
+  {
+    "id": "AT04-017",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 16
+    }
+  },
+  {
+    "id": "AT04-018",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 17
+    }
+  },
+  {
+    "id": "AT04-019",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 18
+    }
+  },
+  {
+    "id": "AT04-020",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 19
+    }
+  },
+  {
+    "id": "AT04-021",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 20
+    }
+  },
+  {
+    "id": "AT04-022",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 21
+    }
+  },
+  {
+    "id": "AT04-023",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 22
+    }
+  },
+  {
+    "id": "AT04-024",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 23
+    }
+  },
+  {
+    "id": "AT04-025",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 24
+    }
+  },
+  {
+    "id": "AT04-026",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 25
+    }
+  },
+  {
+    "id": "AT04-027",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 26
+    }
+  },
+  {
+    "id": "AT04-028",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 27
+    }
+  },
+  {
+    "id": "AT04-029",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 28
+    }
+  },
+  {
+    "id": "AT04-030",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 29
+    }
+  },
+  {
+    "id": "AT04-031",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 30
+    }
+  },
+  {
+    "id": "AT04-032",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 31
+    }
+  },
+  {
+    "id": "AT04-033",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 32
+    }
+  },
+  {
+    "id": "AT04-034",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 33
+    }
+  },
+  {
+    "id": "AT04-035",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 34
+    }
+  },
+  {
+    "id": "AT04-036",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 35
+    }
+  },
+  {
+    "id": "AT04-037",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 36
+    }
+  },
+  {
+    "id": "AT04-038",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 37
+    }
+  },
+  {
+    "id": "AT04-039",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 38
+    }
+  },
+  {
+    "id": "AT04-040",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 39
+    }
+  },
+  {
+    "id": "AT04-041",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 40
+    }
+  },
+  {
+    "id": "AT04-042",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 41
+    }
+  },
+  {
+    "id": "AT04-043",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 42
+    }
+  },
+  {
+    "id": "AT04-044",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 43
+    }
+  },
+  {
+    "id": "AT04-045",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 44
+    }
+  },
+  {
+    "id": "AT04-046",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 45
+    }
+  },
+  {
+    "id": "AT04-047",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 46
+    }
+  },
+  {
+    "id": "AT04-048",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 47
+    }
+  },
+  {
+    "id": "AT04-049",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 48
+    }
+  },
+  {
+    "id": "AT04-050",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 49
+    }
+  },
+  {
+    "id": "AT04-051",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 50
+    }
+  },
+  {
+    "id": "AT04-052",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 51
+    }
+  },
+  {
+    "id": "AT04-053",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 52
+    }
+  },
+  {
+    "id": "AT04-054",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 53
+    }
+  },
+  {
+    "id": "AT04-055",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 54
+    }
+  },
+  {
+    "id": "AT04-056",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 55
+    }
+  },
+  {
+    "id": "AT04-057",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 56
+    }
+  },
+  {
+    "id": "AT04-058",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 57
+    }
+  },
+  {
+    "id": "AT04-059",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 58
+    }
+  },
+  {
+    "id": "AT04-060",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 59
+    }
+  },
+  {
+    "id": "AT04-061",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 60
+    }
+  },
+  {
+    "id": "AT04-062",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 61
+    }
+  },
+  {
+    "id": "AT04-063",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 62
+    }
+  },
+  {
+    "id": "AT04-064",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 63
+    }
+  },
+  {
+    "id": "AT04-065",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 64
+    }
+  },
+  {
+    "id": "AT04-066",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 65
+    }
+  },
+  {
+    "id": "AT04-067",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 66
+    }
+  },
+  {
+    "id": "AT04-068",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 67
+    }
+  },
+  {
+    "id": "AT04-069",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 68
+    }
+  },
+  {
+    "id": "AT04-070",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 69
+    }
+  },
+  {
+    "id": "AT04-071",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 70
+    }
+  },
+  {
+    "id": "AT04-072",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 71
+    }
+  },
+  {
+    "id": "AT04-073",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 72
+    }
+  },
+  {
+    "id": "AT04-074",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 73
+    }
+  },
+  {
+    "id": "AT04-075",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 74
+    }
+  },
+  {
+    "id": "AT04-076",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 75
+    }
+  },
+  {
+    "id": "AT04-077",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 76
+    }
+  },
+  {
+    "id": "AT04-078",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 77
+    }
+  },
+  {
+    "id": "AT04-079",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 78
+    }
+  },
+  {
+    "id": "AT04-080",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 79
+    }
+  },
+  {
+    "id": "AT04-081",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 80
+    }
+  },
+  {
+    "id": "AT04-082",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 81
+    }
+  },
+  {
+    "id": "AT04-083",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 82
+    }
+  },
+  {
+    "id": "AT04-084",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 83
+    }
+  },
+  {
+    "id": "AT04-085",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 84
+    }
+  },
+  {
+    "id": "AT04-086",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 85
+    }
+  },
+  {
+    "id": "AT04-087",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 86
+    }
+  },
+  {
+    "id": "AT04-088",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 87
+    }
+  },
+  {
+    "id": "AT04-089",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 88
+    }
+  },
+  {
+    "id": "AT04-090",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 89
+    }
+  },
+  {
+    "id": "AT04-091",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 90
+    }
+  },
+  {
+    "id": "AT04-092",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 91
+    }
+  },
+  {
+    "id": "AT04-093",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 92
+    }
+  },
+  {
+    "id": "AT04-094",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 93
+    }
+  },
+  {
+    "id": "AT04-095",
+    "at": "AT04",
+    "kind": "provider_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 94
+    }
+  },
+  {
+    "id": "AT04-096",
+    "at": "AT04",
+    "kind": "fresh_request",
+    "expected": "SUBMIT_ONCE",
+    "inputs": {
+      "seed": 95
+    }
+  },
+  {
+    "id": "AT04-097",
+    "at": "AT04",
+    "kind": "timeout_unknown",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {
+      "seed": 96
+    }
+  },
+  {
+    "id": "AT04-098",
+    "at": "AT04",
+    "kind": "crash_after_accept",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 97
+    }
+  },
+  {
+    "id": "AT04-099",
+    "at": "AT04",
+    "kind": "duplicate_worker",
+    "expected": "NO_RETRY",
+    "inputs": {
+      "seed": 98
+    }
+  },
+  {
+    "id": "AT04-100",
+    "at": "AT04",
+    "kind": "forged_receipt",
+    "expected": "REJECT_RECEIPT",
+    "inputs": {
+      "seed": 99
+    }
+  },
+  {
+    "id": "AT05-001",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 0
+    }
+  },
+  {
+    "id": "AT05-002",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 1
+    }
+  },
+  {
+    "id": "AT05-003",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 2
+    }
+  },
+  {
+    "id": "AT05-004",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 3
+    }
+  },
+  {
+    "id": "AT05-005",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 4
+    }
+  },
+  {
+    "id": "AT05-006",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 5
+    }
+  },
+  {
+    "id": "AT05-007",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 6
+    }
+  },
+  {
+    "id": "AT05-008",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 7
+    }
+  },
+  {
+    "id": "AT05-009",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 8
+    }
+  },
+  {
+    "id": "AT05-010",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 9
+    }
+  },
+  {
+    "id": "AT05-011",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 10
+    }
+  },
+  {
+    "id": "AT05-012",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 11
+    }
+  },
+  {
+    "id": "AT05-013",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 12
+    }
+  },
+  {
+    "id": "AT05-014",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 13
+    }
+  },
+  {
+    "id": "AT05-015",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 14
+    }
+  },
+  {
+    "id": "AT05-016",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 15
+    }
+  },
+  {
+    "id": "AT05-017",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 16
+    }
+  },
+  {
+    "id": "AT05-018",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 17
+    }
+  },
+  {
+    "id": "AT05-019",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 18
+    }
+  },
+  {
+    "id": "AT05-020",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 19
+    }
+  },
+  {
+    "id": "AT05-021",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 20
+    }
+  },
+  {
+    "id": "AT05-022",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 21
+    }
+  },
+  {
+    "id": "AT05-023",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 22
+    }
+  },
+  {
+    "id": "AT05-024",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 23
+    }
+  },
+  {
+    "id": "AT05-025",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 24
+    }
+  },
+  {
+    "id": "AT05-026",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 25
+    }
+  },
+  {
+    "id": "AT05-027",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 26
+    }
+  },
+  {
+    "id": "AT05-028",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 27
+    }
+  },
+  {
+    "id": "AT05-029",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 28
+    }
+  },
+  {
+    "id": "AT05-030",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 29
+    }
+  },
+  {
+    "id": "AT05-031",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 30
+    }
+  },
+  {
+    "id": "AT05-032",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 31
+    }
+  },
+  {
+    "id": "AT05-033",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 32
+    }
+  },
+  {
+    "id": "AT05-034",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 33
+    }
+  },
+  {
+    "id": "AT05-035",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 34
+    }
+  },
+  {
+    "id": "AT05-036",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 35
+    }
+  },
+  {
+    "id": "AT05-037",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 36
+    }
+  },
+  {
+    "id": "AT05-038",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 37
+    }
+  },
+  {
+    "id": "AT05-039",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 38
+    }
+  },
+  {
+    "id": "AT05-040",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 39
+    }
+  },
+  {
+    "id": "AT05-041",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 40
+    }
+  },
+  {
+    "id": "AT05-042",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 41
+    }
+  },
+  {
+    "id": "AT05-043",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 42
+    }
+  },
+  {
+    "id": "AT05-044",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 43
+    }
+  },
+  {
+    "id": "AT05-045",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 44
+    }
+  },
+  {
+    "id": "AT05-046",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 45
+    }
+  },
+  {
+    "id": "AT05-047",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 46
+    }
+  },
+  {
+    "id": "AT05-048",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 47
+    }
+  },
+  {
+    "id": "AT05-049",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 48
+    }
+  },
+  {
+    "id": "AT05-050",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 49
+    }
+  },
+  {
+    "id": "AT05-051",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 50
+    }
+  },
+  {
+    "id": "AT05-052",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 51
+    }
+  },
+  {
+    "id": "AT05-053",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 52
+    }
+  },
+  {
+    "id": "AT05-054",
+    "at": "AT05",
+    "kind": "help_task",
+    "expected": "CREATE_TASK",
+    "inputs": {
+      "seed": 53
+    }
+  },
+  {
+    "id": "AT05-055",
+    "at": "AT05",
+    "kind": "resume_link",
+    "expected": "AUTH_REQUIRED",
+    "inputs": {
+      "seed": 54
+    }
+  },
+  {
+    "id": "AT05-056",
+    "at": "AT05",
+    "kind": "approved",
+    "expected": "ALLOW",
+    "inputs": {
+      "seed": 55
+    }
+  },
+  {
+    "id": "AT05-057",
+    "at": "AT05",
+    "kind": "wrong_template",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 56
+    }
+  },
+  {
+    "id": "AT05-058",
+    "at": "AT05",
+    "kind": "self_approval",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 57
+    }
+  },
+  {
+    "id": "AT05-059",
+    "at": "AT05",
+    "kind": "direct_api",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 58
+    }
+  },
+  {
+    "id": "AT05-060",
+    "at": "AT05",
+    "kind": "sensitive_payload",
+    "expected": "BLOCK",
+    "inputs": {
+      "seed": 59
+    }
+  },
+  {
+    "id": "EDGE-01",
+    "at": "EDGE",
+    "kind": "kill_switch_during_batch",
+    "expected": "HALT_REMAINING",
+    "inputs": {}
+  },
+  {
+    "id": "EDGE-02",
+    "at": "EDGE",
+    "kind": "gateway_disconnect",
+    "expected": "HOLD_RECONCILIATION",
+    "inputs": {}
+  },
+  {
+    "id": "EDGE-03",
+    "at": "EDGE",
+    "kind": "source_delay_61s",
+    "expected": "HOLD",
+    "inputs": {}
+  },
+  {
+    "id": "EDGE-04",
+    "at": "EDGE",
+    "kind": "outside_window_0859",
+    "expected": "DEFER",
+    "inputs": {}
+  },
+  {
+    "id": "EDGE-05",
+    "at": "EDGE",
+    "kind": "outside_window_1800",
+    "expected": "DEFER",
+    "inputs": {}
+  },
+  {
+    "id": "EDGE-06",
+    "at": "EDGE",
+    "kind": "inside_window_0900",
+    "expected": "ALLOW",
+    "inputs": {}
+  },
+  {
+    "id": "EDGE-07",
+    "at": "EDGE",
+    "kind": "inside_window_1759",
+    "expected": "ALLOW",
+    "inputs": {}
+  }
+]

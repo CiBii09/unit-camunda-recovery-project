@@ -14,6 +14,8 @@ worker:
     read-timeout: 15s
   suppression:
     base-url: "${WORKER_SUPPRESSION_BASE_URL:http://localhost:8001}"
+  safety-controls:
+    base-url: "${WORKER_SAFETY_CONTROLS_BASE_URL:http://localhost:8080}"
   sms-gateway:
     base-url: "${WORKER_SMS_GATEWAY_BASE_URL:http://localhost:4500}"
   retry:

@@ -134,3 +134,23 @@ Dùng cho cụm điều khiển khẩn cấp `SafetyControls.tsx` trên `Header.
   "message": "Hệ thống đang bật Global Kill-Switch, từ chối xử lý gửi tin mới.",
   "timestamp": "2026-11-19T10:46:00Z"
 }
+```
+
+## 2. Sprint 3 safety control API (Camunda worker integration)
+
+The base URL above includes `/api/v1`. The backend exposes the following paths under that prefix:
+
+| Method | Path | Purpose |
+|---|---|---|
+| `GET` | `/safety/status` | Read `killSwitchActive`, `queuePaused`, update actor and timestamp |
+| `POST` | `/safety/kill-switch` | Set `{ "enabled": boolean, "reason": string, "operatorId": string }` |
+| `POST` | `/safety/queue-pause` | Set `{ "paused": boolean, "reason": string, "operatorId": string }` |
+| `GET` | `/safety/audit-logs` | Read audit entries for control changes |
+
+Both `POST` responses include `status`, the effective safety state, `auditLogId`, and `timestamp`. Enabling Kill-Switch forces Queue Pause on. Disabling Kill-Switch does not resume the queue, and a queue-resume request while Kill-Switch is active remains paused.
+
+The Camunda 8 worker calls `GET /api/v1/safety/status` before suppression and again immediately before dispatch. If either control is active, or if the safety API is unavailable or malformed, the worker completes into the BPMN Safe Hold branch and synchronizes `dispatchDecision`, `blockReason`, and safety status to process variables. Safe-held work releases its idempotency claim so an operator can resume it after reviewing the state; completed dispatch results and variables are persisted together for safe job redelivery.
+
+The BPMN Safe Hold branch creates an operator-review user task. After resetting Kill-Switch, explicitly resuming Queue Pause, and reviewing the task, completing it returns to the dispatch worker. A request already accepted by an SMS provider cannot be recalled.
+
+For local tests, run the backend at `http://localhost:8080` and the mock SMS gateway at `http://localhost:4500`. The 1,000-record worker simulation uses mocked safety/gateway clients; it does not send real SMS. The generated `safety-controls-e2e.log` records its pause/resume summary.

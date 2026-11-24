@@ -5,6 +5,7 @@ import io.camunda.zeebe.client.api.worker.JobClient;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.Duration;
+import java.util.Map;
 import java.util.UUID;
 
 @Slf4j
@@ -33,7 +34,7 @@ public abstract class BaseIdempotentWorker {
             IdempotencyStore.ClaimResult claim = idempotencyStore.claim(idempotencyKey, claimToken);
             if (claim == IdempotencyStore.ClaimResult.COMPLETED) {
                 log.info("Bỏ qua Job đã xử lý [JobKey: {}, IdempotencyKey: {}]", jobKey, idempotencyKey);
-                completeJob(client, jobKey);
+                completeJob(client, jobKey, idempotencyStore.getCompletionVariables(idempotencyKey));
                 return;
             }
             if (claim == IdempotencyStore.ClaimResult.IN_PROGRESS) {
@@ -48,8 +49,12 @@ public abstract class BaseIdempotentWorker {
             return;
         }
 
+        WorkerResult result;
         try {
-            executeBusinessLogic(client, job, idempotencyKey);
+            result = executeBusinessLogic(client, job, idempotencyKey);
+            if (result == null) {
+                throw new IllegalStateException("Worker returned no processing result");
+            }
         } catch (SafeToRetryException e) {
             log.error("Có thể retry an toàn trước khi xác nhận Job [JobKey: {}, IdempotencyKey: {}]",
                     jobKey, idempotencyKey, e);
@@ -68,25 +73,42 @@ public abstract class BaseIdempotentWorker {
             return;
         }
 
-        try {
-            idempotencyStore.markCompleted(idempotencyKey, claimToken);
-        } catch (Exception e) {
-            log.error("Nghiệp vụ đã chạy nhưng không lưu được trạng thái idempotency "
-                    + "[JobKey: {}, IdempotencyKey: {}]", jobKey, idempotencyKey, e);
-            failJob(client, job, e.getMessage());
-            return;
+        if (result.markIdempotencyCompleted()) {
+            try {
+                idempotencyStore.markCompleted(
+                        idempotencyKey, claimToken, result.processVariables());
+            } catch (Exception e) {
+                log.error("Nghiệp vụ đã chạy nhưng không lưu được trạng thái idempotency "
+                        + "[JobKey: {}, IdempotencyKey: {}]", jobKey, idempotencyKey, e);
+                failJob(client, job, e.getMessage());
+                return;
+            }
+        } else {
+            try {
+                idempotencyStore.release(idempotencyKey, claimToken);
+            } catch (Exception e) {
+                log.error("Không thể nhả claim idempotency cho Safe Hold "
+                        + "[JobKey: {}, IdempotencyKey: {}]", jobKey, idempotencyKey, e);
+                failJob(client, job, e.getMessage());
+                return;
+            }
         }
 
-        completeJob(client, jobKey);
+        completeJob(client, jobKey, result.processVariables());
     }
 
     protected String getIdempotencyKey(ActivatedJob job) {
         return job.getType() + ":" + job.getKey();
     }
 
-    private void completeJob(JobClient client, long jobKey) {
+    private void completeJob(JobClient client, long jobKey, Map<String, Object> variables) {
         try {
-            client.newCompleteCommand(jobKey).send().join();
+            var command = client.newCompleteCommand(jobKey);
+            if (variables.isEmpty()) {
+                command.send().join();
+            } else {
+                command.variables(variables).send().join();
+            }
             log.info("Hoàn thành Job [JobKey: {}]", jobKey);
         } catch (Exception e) {
             log.error("Không thể gửi lệnh Complete tới Zeebe [JobKey: {}]. Job sẽ được xử lý lại an toàn.",
@@ -121,7 +143,7 @@ public abstract class BaseIdempotentWorker {
         }
     }
 
-    protected abstract void executeBusinessLogic(
+    protected abstract WorkerResult executeBusinessLogic(
             JobClient client, ActivatedJob job, String idempotencyKey) throws Exception;
 
     protected static class SafeToRetryException extends Exception {

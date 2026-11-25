@@ -1,4 +1,7 @@
-﻿from src.event_validator import validate_event
+﻿from contextlib import contextmanager
+from threading import Lock
+
+from src.event_validator import validate_event
 from src.deduplication import Deduplication
 from src.event_sequence import EventSequenceTracker
 from src.stale_check import check_staleness
@@ -26,6 +29,46 @@ class EventProcessor:
         self.sequence_tracker = EventSequenceTracker()
         self.status_provider = status_provider
 
+        self._event_locks = {}
+        self._event_locks_guard = Lock()
+
+    @contextmanager
+    def _event_lock(self, event_id):
+        """
+        Acquire a lock dedicated to one event_id.
+
+        Different event IDs can be processed concurrently.
+        Unused locks are removed from the registry.
+        """
+        with self._event_locks_guard:
+            entry = self._event_locks.get(event_id)
+
+            if entry is None:
+                lock = Lock()
+                users = 0
+            else:
+                lock, users = entry
+
+            self._event_locks[event_id] = (lock, users + 1)
+
+        lock.acquire()
+
+        try:
+            yield
+        finally:
+            lock.release()
+
+            with self._event_locks_guard:
+                current_lock, users = self._event_locks[event_id]
+
+                if users == 1:
+                    del self._event_locks[event_id]
+                else:
+                    self._event_locks[event_id] = (
+                        current_lock,
+                        users - 1,
+                    )
+
     def process_event(
         self,
         event,
@@ -47,6 +90,24 @@ class EventProcessor:
                 "application_status": None
             }
 
+        # Serialize processing only for the same event_id.
+        with self._event_lock(event["event_id"]):
+            return self._process_validated_event(
+                event=event,
+                validation=validation,
+                status_time=status_time,
+                now=now,
+                max_age_seconds=max_age_seconds,
+            )
+
+    def _process_validated_event(
+        self,
+        event,
+        validation,
+        status_time=None,
+        now=None,
+        max_age_seconds=60
+    ):
         # 2. Deduplicate event
         if self.deduplication.is_duplicate(event):
             return {
@@ -137,7 +198,7 @@ class EventProcessor:
         # 5. Check event sequence
         sequence_result = self.sequence_tracker.process_event(event)
 
-        # 6. Register event after freshness check
+        # 6. Register event after freshness check.
         # Keep gap events recorded so missing sequences can resolve the gap.
         self.deduplication.register_event(event)
 

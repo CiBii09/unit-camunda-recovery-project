@@ -1,3 +1,5 @@
+﻿from threading import RLock
+
 
 class EventSequenceTracker:
     """
@@ -7,6 +9,7 @@ class EventSequenceTracker:
 
     def __init__(self):
         self.applications = {}
+        self._lock = RLock()
 
     def process_event(self, event):
         if not isinstance(event, dict):
@@ -42,49 +45,49 @@ class EventSequenceTracker:
             event["application_id"],
         )
 
-        if key not in self.applications:
-            self.applications[key] = {
-                "received": set(),
-                "contiguous_sequence": 0,
-            }
+        with self._lock:
+            if key not in self.applications:
+                self.applications[key] = {
+                    "received": set(),
+                    "contiguous_sequence": 0,
+                }
 
-        state = self.applications[key]
-        received = state["received"]
+            state = self.applications[key]
+            received = state["received"]
 
-        if sequence in received:
+            if sequence in received:
+                return {
+                    "status": "DUPLICATE_SEQUENCE",
+                    "safe_hold": True,
+                    "missing_sequences": [],
+                    "contiguous_sequence": state["contiguous_sequence"],
+                }
+
+            previous_missing = self._get_missing_sequences(received)
+
+            received.add(sequence)
+
+            while state["contiguous_sequence"] + 1 in received:
+                state["contiguous_sequence"] += 1
+
+            missing = self._get_missing_sequences(received)
+
+            if missing:
+                status = "GAP_DETECTED"
+                safe_hold = True
+            elif previous_missing:
+                status = "GAP_RESOLVED"
+                safe_hold = False
+            else:
+                status = "IN_ORDER"
+                safe_hold = False
+
             return {
-                "status": "DUPLICATE_SEQUENCE",
-                "safe_hold": True,
-                "missing_sequences": [],
+                "status": status,
+                "safe_hold": safe_hold,
+                "missing_sequences": missing,
                 "contiguous_sequence": state["contiguous_sequence"],
             }
-
-        previous_missing = self._get_missing_sequences(received)
-        previous_contiguous = state["contiguous_sequence"]
-
-        received.add(sequence)
-
-        while state["contiguous_sequence"] + 1 in received:
-            state["contiguous_sequence"] += 1
-
-        missing = self._get_missing_sequences(received)
-
-        if missing:
-            status = "GAP_DETECTED"
-            safe_hold = True
-        elif previous_missing:
-            status = "GAP_RESOLVED"
-            safe_hold = False
-        else:
-            status = "IN_ORDER"
-            safe_hold = False
-
-        return {
-            "status": status,
-            "safe_hold": safe_hold,
-            "missing_sequences": missing,
-            "contiguous_sequence": state["contiguous_sequence"],
-        }
 
     @staticmethod
     def _get_missing_sequences(received):

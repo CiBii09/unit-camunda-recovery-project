@@ -1,4 +1,5 @@
 ﻿from datetime import datetime, timezone
+from threading import RLock
 
 
 AUTHORITATIVE_STATUSES = {
@@ -24,6 +25,7 @@ class ApplicationStatusProvider:
 
     def __init__(self, records=None):
         self.records = records or {}
+        self._lock = RLock()
 
     @staticmethod
     def _make_key(bank, applicant_key, application_id):
@@ -36,12 +38,14 @@ class ApplicationStatusProvider:
         Returns None when no matching record exists.
         """
         key = self._make_key(bank, applicant_key, application_id)
-        record = self.records.get(key)
 
-        if record is None:
-            return None
+        with self._lock:
+            record = self.records.get(key)
 
-        return dict(record)
+            if record is None:
+                return None
+
+            return dict(record)
 
     def update_status(self, record):
         """
@@ -95,13 +99,14 @@ class ApplicationStatusProvider:
             record["application_id"],
         )
 
-        existing = self.records.get(key)
+        with self._lock:
+            existing = self.records.get(key)
 
-        if existing is not None and record["version"] <= existing["version"]:
-            raise ValueError("version must be greater than the existing version")
+            if existing is not None and record["version"] <= existing["version"]:
+                raise ValueError("version must be greater than the existing version")
 
-        self.records[key] = dict(record)
-        return dict(record)
+            self.records[key] = dict(record)
+            return dict(record)
 
     def check_status(self, bank, applicant_key, application_id, now=None,
                      max_age_seconds=60):

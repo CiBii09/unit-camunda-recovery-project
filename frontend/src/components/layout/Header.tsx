@@ -1,6 +1,5 @@
 import React from 'react';
 import { AlertOctagon, User } from 'lucide-react';
-import { SafetyControls } from './SafetyControls';
 
 interface HeaderProps {
   title: string;
@@ -15,7 +14,12 @@ export const Header: React.FC<HeaderProps> = ({ title, showKillSwitch = false })
       </div>
 
       <div className="flex items-center space-x-4">
-        {showKillSwitch && <SafetyControls />}
+        {showKillSwitch && (
+          <button className="flex items-center space-x-2 px-4 py-1.5 rounded text-xs font-extrabold tracking-wide uppercase bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/40">
+            <AlertOctagon size={15} />
+          </button>
+        )}
+
         <div className="flex items-center space-x-3 border-l pl-4 border-slate-800">
           <div className="w-7 h-7 bg-slate-800 rounded-full flex items-center justify-center text-slate-300">
             <User size={15} />

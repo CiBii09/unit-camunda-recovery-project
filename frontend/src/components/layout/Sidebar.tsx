@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Users, FileText, Activity, Settings, HelpCircle, ShieldAlert } from 'lucide-react';
+import { LayoutDashboard, Users, ShieldAlert } from 'lucide-react';
 
 interface SidebarProps {
   activeTab: 'QUEUE' | 'DASHBOARD';
@@ -13,7 +13,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
         {/* Logo */}
         <div className="flex items-center space-x-2 px-2 py-1">
           <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white text-xs tracking-wider">
-        
+            AI
           </div>
           <span className="font-bold text-white text-base tracking-tight">BANK-AI-06</span>
         </div>
@@ -45,32 +45,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
             <LayoutDashboard size={16} />
             <span>Recovery Dashboard</span>
           </button>
-
-          <a href="#" className="flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-slate-800/50 text-slate-400 transition-colors">
-            <FileText size={16} />
-            <span>Applications</span>
-          </a>
-
-          <a href="#" className="flex items-center space-x-3 px-3 py-2.5 rounded-lg hover:bg-slate-800/50 text-slate-400 transition-colors">
-            <Activity size={16} />
-            <span>Health Monitoring</span>
-          </a>
         </nav>
       </div>
 
       {/* Footer System Info */}
       <div className="border-t border-slate-800/80 pt-4 space-y-2 text-xs">
-        <div className="flex items-center space-x-2 text-[11px] text-slate-400 px-2 py-1 bg-slate-900/60 rounded">
+        <div className="flex items-center space-x-2 text-[11px] text-slate-400 px-2 py-1.5 bg-slate-900/60 rounded">
           <ShieldAlert size={14} className="text-emerald-500" />
           <span>Staff Operations (INT 04)</span>
-        </div>
-        <div className="flex items-center space-x-3 px-3 py-1.5 text-slate-400 hover:text-white cursor-pointer">
-          <Settings size={15} />
-          <span>Settings</span>
-        </div>
-        <div className="flex items-center space-x-3 px-3 py-1.5 text-slate-400 hover:text-white cursor-pointer">
-          <HelpCircle size={15} />
-          <span>Help & Resources</span>
         </div>
       </div>
     </aside>

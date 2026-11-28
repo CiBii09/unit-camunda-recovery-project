@@ -3,11 +3,20 @@ const PORT = process.env.PORT || 4500;
 const JSON_HEADER = { "Content-Type": "application/json" };
 
 let localCart = [];
-const dbRecords = new Map(); // Lưu trạng thái giao dịch + attemptKey + DLR
+const dbRecords = new Map(); // Lưu trạng thái giao dịch + attemptKey + DLR (key: requestId)
+const gatewayIdToRequestId = new Map(); // Tra cứu nhanh theo gatewayMessageId cho DLR trễ/lặp
+const dlrSeenEvents = new Set(); // Chống xử lý trùng lặp từng sự kiện DLR
 const auditLogs = [];
 const rateLimitWindow = [];
 const RATE_LIMIT_MAX = 15; // Tối đa 15 request / 5 giây
 const RATE_LIMIT_MS = 5000;
+
+const DLR_STATUS_PRIORITY = {
+  SENT: 1,
+  FAILED: 2,
+  DELIVERED: 3,
+  OPT_OUT: 3
+};
 
 function createInitialSafetyState() {
   return {
@@ -48,6 +57,13 @@ function checkRateLimit() {
   return true;
 }
 
+function calculateBackoffMs(retryCount = 0, baseDelayMs = 500, maxDelayMs = 8000) {
+  const safeRetry = Math.max(0, Number(retryCount) || 0);
+  const exponential = baseDelayMs * Math.pow(2, safeRetry);
+  const jitter = Math.floor(Math.random() * 150);
+  return Math.min(exponential + jitter, maxDelayMs);
+}
+
 function appendAuditLog(actionType, actor, reason) {
   const auditLogId = `AUD-${Date.now()}-${Math.floor(100 + Math.random() * 900)}`;
   const entry = {
@@ -59,6 +75,17 @@ function appendAuditLog(actionType, actor, reason) {
   };
   auditLogs.push(entry);
   return entry;
+}
+
+function findRecordByDlrPayload(body) {
+  if (body.requestId && dbRecords.has(body.requestId)) {
+    return dbRecords.get(body.requestId);
+  }
+  if (body.gatewayMessageId && gatewayIdToRequestId.has(body.gatewayMessageId)) {
+    const reqId = gatewayIdToRequestId.get(body.gatewayMessageId);
+    return dbRecords.get(reqId) || null;
+  }
+  return null;
 }
 
 const server = http.createServer(async (req, res) => {
@@ -176,6 +203,16 @@ const server = http.createServer(async (req, res) => {
     }
 
     const body = await readBody(req);
+    if (safetyState.queuePaused && body.bypassQueuePause !== true) {
+      res.writeHead(423, JSON_HEADER);
+      return res.end(JSON.stringify({
+        status: "QUEUE_PAUSED",
+        errorCode: "QUEUE_PAUSED",
+        requestId: body.requestId || "DEFAULT_REQUEST_ID",
+        message: "Hàng đợi gửi SMS đang tạm dừng (Queue Paused)."
+      }));
+    }
+
     const content = body.content ?? body.messageContent ?? "";
     const isUnicode = body.isUnicode ?? true;
     const gatewayMessageId = `GW-MSG-${Math.floor(10000 + Math.random() * 90000)}`;
@@ -197,35 +234,101 @@ const server = http.createServer(async (req, res) => {
     }));
   }
 
-  // --- DLR Webhook ---
+  // --- DLR Webhook (Chống trùng lặp & chống ghi đè lùi trạng thái cuối) ---
   if (method === "POST" && cleanUrl === "/api/v1/sms/webhook/dlr") {
     const body = await readBody(req);
     const deliveredAt = body.deliveredAt || new Date().toISOString();
-    const status = body.status || "DELIVERED";
+    const incomingStatus = body.status || "DELIVERED";
+    const incomingPriority = DLR_STATUS_PRIORITY[incomingStatus] ?? 1;
 
-    if (body.requestId && dbRecords.has(body.requestId)) {
-      const record = dbRecords.get(body.requestId);
-      record.deliveryStatus = status;
-      record.deliveredAt = deliveredAt;
-      record.errorDetail = body.errorDetail ?? null;
-      dbRecords.set(body.requestId, record);
+    const corrKey = body.requestId || body.gatewayMessageId || body.phoneNumber || "UNKNOWN";
+    const dedupKey = `${corrKey}::${incomingStatus}::${deliveredAt}`;
+
+    if (dlrSeenEvents.has(dedupKey)) {
+      const existingRecord = findRecordByDlrPayload(body);
+      res.writeHead(200, JSON_HEADER);
+      return res.end(JSON.stringify({
+        code: "00",
+        success: true,
+        duplicate: true,
+        lateOrOutOfOrder: false,
+        gatewayMessageId: body.gatewayMessageId || existingRecord?.gatewayMessageId || null,
+        requestId: body.requestId || existingRecord?.requestId || null,
+        status: existingRecord?.deliveryStatus || incomingStatus,
+        deliveredAt: existingRecord?.deliveredAt || deliveredAt,
+        errorDetail: existingRecord?.errorDetail ?? (body.errorDetail ?? null),
+        description: "Webhook DLR trùng lặp đã được bỏ qua an toàn, giữ nguyên trạng thái."
+      }));
+    }
+    dlrSeenEvents.add(dedupKey);
+
+    const record = findRecordByDlrPayload(body);
+    let effectiveStatus = incomingStatus;
+    let effectiveDeliveredAt = deliveredAt;
+    let effectiveErrorDetail = body.errorDetail ?? null;
+    let lateOrOutOfOrder = false;
+
+    if (record) {
+      const currentPriority = DLR_STATUS_PRIORITY[record.deliveryStatus] ?? 0;
+      if (currentPriority > incomingPriority) {
+        // Webhook đến trễ mang trạng thái cấp thấp hơn (vd SENT về sau DELIVERED/OPT_OUT) -> không ghi đè lùi
+        lateOrOutOfOrder = true;
+        effectiveStatus = record.deliveryStatus;
+        effectiveDeliveredAt = record.deliveredAt;
+        effectiveErrorDetail = record.errorDetail;
+        record.dlrHistory = record.dlrHistory || [];
+        record.dlrHistory.push({
+          status: incomingStatus,
+          deliveredAt,
+          lateOrOutOfOrder: true,
+          receivedAt: new Date().toISOString()
+        });
+      } else if (currentPriority === incomingPriority && record.deliveryStatus === incomingStatus) {
+        // Trạng thái trùng mức ưu tiên (vd DELIVERED gửi lặp với timestamp khác hoặc OPT_OUT giữ nguyên)
+        lateOrOutOfOrder = true;
+        effectiveDeliveredAt = record.deliveredAt || deliveredAt;
+        record.dlrHistory = record.dlrHistory || [];
+        record.dlrHistory.push({
+          status: incomingStatus,
+          deliveredAt,
+          lateOrOutOfOrder: true,
+          receivedAt: new Date().toISOString()
+        });
+      } else {
+        // Nâng cấp lên trạng thái cao hơn (vd SENT -> DELIVERED hoặc OPT_OUT)
+        record.deliveryStatus = incomingStatus;
+        record.deliveredAt = deliveredAt;
+        record.errorDetail = body.errorDetail ?? null;
+        record.dlrHistory = record.dlrHistory || [];
+        record.dlrHistory.push({
+          status: incomingStatus,
+          deliveredAt,
+          lateOrOutOfOrder: false,
+          receivedAt: new Date().toISOString()
+        });
+      }
+      dbRecords.set(record.requestId, record);
     }
 
     res.writeHead(200, JSON_HEADER);
     return res.end(JSON.stringify({
       code: "00",
       success: true,
-      gatewayMessageId: body.gatewayMessageId || null,
-      requestId: body.requestId || null,
-      status,
-      deliveredAt,
-      errorDetail: body.errorDetail ?? null,
-      description: "Cap nhat DLR thanh cong"
+      duplicate: false,
+      lateOrOutOfOrder,
+      gatewayMessageId: body.gatewayMessageId || record?.gatewayMessageId || null,
+      requestId: body.requestId || record?.requestId || null,
+      status: effectiveStatus,
+      deliveredAt: effectiveDeliveredAt,
+      errorDetail: effectiveErrorDetail,
+      description: lateOrOutOfOrder
+        ? "Nhận DLR trễ/lệch thứ tự, bảo toàn trạng thái cuối không thất thoát."
+        : "Cap nhat DLR thanh cong"
     }));
   }
 
   // =========================================================================
-  // ADAPTER SMS GATEWAY (REC 08, Timeout Reconciliation, Idempotency & Rate Limit)
+  // ADAPTER SMS GATEWAY (REC 08, Backoff, Timeout Reconciliation, Idempotency & Rate Limit)
   // =========================================================================
   if (method === "POST" && cleanUrl === "/api/v1/sms/adapter/send") {
     if (safetyState.killSwitchActive) {
@@ -257,16 +360,24 @@ const server = http.createServer(async (req, res) => {
       }));
     }
 
-    // 2. Xử lý khi nhà cung cấp timeout, không retry mù mà kích hoạt đối soát
+    // 2. Xử lý khi nhà cung cấp timeout, gợi ý exponential backoff & kích hoạt đối soát
     if (body.simulateTimeout === true) {
+      const nextRetryCount = retryCount + 1;
+      const canRetryWithBackoff = nextRetryCount <= maxRetries;
+      const recommendedBackoffMs = canRetryWithBackoff
+        ? calculateBackoffMs(retryCount)
+        : null;
+
       res.writeHead(504, JSON_HEADER);
       return res.end(JSON.stringify({
         status: "GATEWAY_TIMEOUT",
         errorCode: "504",
         requestId,
         retryCount,
+        canRetryWithBackoff,
+        recommendedBackoffMs,
         action: "TRIGGER_RECONCILIATION_JOB",
-        description: "Nha cung cap timeout. Adapter tuan thu REC 08, dung retry mu va kich hoat doi soat."
+        description: "Nha cung cap timeout. Adapter dung retry mu, ap dung backoff co kiem soat va kich hoat doi soat."
       }));
     }
 
@@ -311,6 +422,7 @@ const server = http.createServer(async (req, res) => {
     // 6. Ghi nhận bản ghi vào DB mô phỏng và trả về kết quả
     const gatewayMessageId = `GW-MSG-${Math.floor(10000 + Math.random() * 90000)}`;
     const sentAt = new Date().toISOString();
+    const recommendedBackoffMs = retryCount > 0 ? calculateBackoffMs(retryCount) : 0;
 
     dbRecords.set(requestId, {
       requestId,
@@ -325,8 +437,10 @@ const server = http.createServer(async (req, res) => {
       sentAt,
       deliveredAt: null,
       errorDetail: null,
+      dlrHistory: [],
       timestamp: Date.now()
     });
+    gatewayIdToRequestId.set(gatewayMessageId, requestId);
 
     res.writeHead(200, JSON_HEADER);
     return res.end(JSON.stringify({
@@ -338,6 +452,7 @@ const server = http.createServer(async (req, res) => {
       attemptKey,
       deliveryStatus: "SENT",
       sentAt,
+      recommendedBackoffMs,
       idempotencyKeyVerified: true,
       description: "Adapter xu ly thanh cong ban tin, ghi nhan attempt key va tuan thu REC 08."
     }));
@@ -356,6 +471,8 @@ const server = http.createServer(async (req, res) => {
   if (method === "POST" && cleanUrl === "/api/v1/test/reset") {
     localCart = [];
     dbRecords.clear();
+    gatewayIdToRequestId.clear();
+    dlrSeenEvents.clear();
     auditLogs.length = 0;
     rateLimitWindow.length = 0;
     safetyState = createInitialSafetyState();
